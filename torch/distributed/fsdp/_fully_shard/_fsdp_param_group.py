@@ -458,7 +458,8 @@ class FSDPParamGroup:
                 reduce_scatter_input, reduce_scatter_event
             )
             if all_reduce_input is not None:
-                assert all_reduce_event is not None
+                if self.device is not None and self.device.type != "cpu":
+                    assert all_reduce_event is not None
                 self._all_reduce_state = AllReduceState(
                     all_reduce_input, all_reduce_event
                 )

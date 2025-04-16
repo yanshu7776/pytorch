@@ -137,15 +137,17 @@ export default function StudioInfo() {
                   <h4 className="text-lg font-bold text-gray-800">対象者</h4>
                 </div>
                 <p className="text-gray-700 mb-6 pl-8">
-                  <span className="bg-gradient-to-r from-[#4facfe] to-[#00f2fe] bg-clip-text text-transparent font-bold">
+                  <span className="bg-gradient-to-r from-[#4facfe] to-[#00f2fe] bg-clip-text text-transparent font-bold block sm:inline-block mb-2 sm:mb-0">
                     「玉造で始める、自由な表現の場」
                   </span>
-                  <br />
-                  <br />
+                  <br className="hidden sm:inline" />
+                  <br className="hidden sm:inline" />
                   玉造ダンススタジオBeyondは、
                   <span className="font-bold">初心者からプロまで対応</span>
                   する多目的レンタルスペース。
-                  ダンス・ヨガ・動画撮影など、クリエイティブな活動を支える環境を提供します。
+                  <span className="block mt-2">
+                    ダンス・ヨガ・動画撮影など、クリエイティブな活動を支える環境を提供します。
+                  </span>
                 </p>
 
                 <div className="bg-[#f8f9fa] p-5 rounded-lg mb-6">
@@ -156,7 +158,7 @@ export default function StudioInfo() {
                         1
                       </div>
                       <div className="flex-1">
-                        <h6 className="font-bold text-gray-800 text-sm inline-block min-w-[120px]">即日予約可能</h6>
+                        <h6 className="font-bold text-gray-800 text-sm">即日予約可能</h6>
                         <p className="text-xs text-gray-600">当日の空室状況をリアルタイム表示</p>
                       </div>
                     </div>
@@ -166,7 +168,7 @@ export default function StudioInfo() {
                         2
                       </div>
                       <div className="flex-1">
-                        <h6 className="font-bold text-gray-800 text-sm inline-block min-w-[120px]">完全防音設計</h6>
+                        <h6 className="font-bold text-gray-800 text-sm">完全防音設計</h6>
                         <p className="text-xs text-gray-600">深夜練習も近隣への配慮</p>
                       </div>
                     </div>
@@ -176,8 +178,8 @@ export default function StudioInfo() {
                         3
                       </div>
                       <div className="flex-1">
-                        <h6 className="font-bold text-gray-800 text-sm inline-block min-w-[120px]">プロ仕様設備</h6>
-                        <p className="text-xs text-gray-600">全面ミラー（W720cm×H200cm）・Bluetoothスピーカー</p>
+                        <h6 className="font-bold text-gray-800 text-sm">プロ仕様設備</h6>
+                        <p className="text-xs text-gray-600">全面ミラー・Bluetoothスピーカー</p>
                       </div>
                     </div>
                   </div>
@@ -216,16 +218,24 @@ export default function StudioInfo() {
           >
             <h4 className="text-lg font-bold mb-6 text-center text-gray-800">玉造ダンススタジオBeyondの特徴</h4>
             <p className="text-gray-700 mb-4 text-center">
-              <span className="font-medium">玉造駅から徒歩2分</span>のアクセス抜群の立地に位置する当スタジオは、
-              <span className="font-medium">天王寺区で人気のレンタルスタジオ</span>です。
-              <span className="font-medium">当日予約可能なダンススタジオ</span>として、急な練習にも対応。
-              <span className="font-medium">格安ダンスレンタル</span>
-              料金で、長時間の利用もリーズナブルにご利用いただけます。
+              <span className="font-medium block sm:inline">玉造駅から徒歩2分</span>
+              のアクセス抜群の立地に位置する当スタジオは、
+              <span className="font-medium block sm:inline mt-1 sm:mt-0">天王寺区で人気のレンタルスタジオ</span>です。
+              <span className="block sm:inline mt-1 sm:mt-0">
+                <span className="font-medium">当日予約可能なダンススタジオ</span>
+                として、急な練習にも対応。
+              </span>
+              <span className="block sm:inline mt-1 sm:mt-0">
+                <span className="font-medium">格安ダンスレンタル</span>
+                料金で、長時間の利用もリーズナブルにご利用いただけます。
+              </span>
             </p>
             <p className="text-gray-700 text-center">
-              <span className="font-medium">初心者向けダンススタジオ</span>としての設備も充実しており、
-              初めての方でも安心して利用できる環境を整えています。
-              <span className="font-medium">玉造のダンス練習場</span>をお探しなら、 ぜひBeyondをご利用ください。
+              <span className="font-medium block sm:inline">初心者向けダンススタジオ</span>としての設備も充実しており、
+              <span className="block sm:inline mt-1 sm:mt-0">初めての方でも安心して利用できる環境を整えています。</span>
+              <span className="block sm:inline mt-1 sm:mt-0">
+                <span className="font-medium">玉造のダンス練習場</span>をお探しなら、 ぜひBeyondをご利用ください。
+              </span>
             </p>
           </motion.div>
 

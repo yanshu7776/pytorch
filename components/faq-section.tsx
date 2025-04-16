@@ -23,11 +23,11 @@ export default function FaqSection() {
         <div>
           <p className="text-sm text-left">はい、可能です。詳細は下記ページの「予約について」をご覧ください。</p>
           <div className="bg-gray-50 p-3 rounded-md mt-3 border border-gray-100">
-            <div className="flex items-start">
-              <div className="relative w-24 h-20 flex-shrink-0 overflow-hidden rounded-md">
+            <div className="flex flex-col sm:flex-row sm:items-start">
+              <div className="relative w-full sm:w-24 h-40 sm:h-20 flex-shrink-0 overflow-hidden rounded-md mb-3 sm:mb-0">
                 <Image src="/images/studio-1.jpeg" alt="予約フォーム" fill className="object-cover" />
               </div>
-              <div className="ml-3">
+              <div className="sm:ml-3">
                 <h4 className="font-medium text-gray-900 mb-1 text-sm">ご予約フォーム | レンタルスタジオ Beyond</h4>
                 <p className="text-xs text-gray-600 text-left">
                   ご希望の時間帯が空いていましたら、すぐにご予約、利用可能です。下のご予約フォームにてご予約下さい。ポータルサイト経由でもご予約は可能ですが、本サイトからのご予約...

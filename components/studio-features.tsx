@@ -44,8 +44,9 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">清潔できれい</h3>
-                <p className="text-base leading-loose text-center mb-4">
-                  最新のリフォームで生まれ変わった、清潔感あふれるスタジオです。
+                <p className="text-gray-700 text-center mb-4">
+                  最新のリフォームで生まれ変わった、
+                  <span className="block sm:inline">清潔感あふれるスタジオです。</span>
                 </p>
                 <p className="text-gray-700 text-center">
                   スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。
@@ -66,7 +67,10 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">充実した設備</h3>
-                <p className="text-gray-700 text-center mb-4">3.6mの大型鏡に、気分を盛り上げるLEDライト完備</p>
+                <p className="text-gray-700 text-center mb-4">
+                  <span className="block sm:inline">3.6mの大型鏡に、</span>
+                  <span className="block sm:inline">気分を盛り上げるLEDライト完備</span>
+                </p>
                 <p className="text-gray-700 text-center">
                   ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。
                 </p>
@@ -95,8 +99,7 @@ export default function StudioFeatures() {
                     <span className="relative z-10">定期利用をご利用いただくと</span>
                     <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
                   </span>
-                  <br />
-                  更にお得にご利用可能です。
+                  <span className="block mt-1">更にお得にご利用可能です。</span>
                 </p>
               </div>
             </motion.div>
@@ -133,16 +136,20 @@ export default function StudioFeatures() {
                       天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです。
                       35㎡の広々とした空間で、グループレッスンやチーム練習に最適。24時間いつでも利用可能で当日予約もOKです。
                     </p>
-                    <div className="bg-blue-50 rounded-xl px-6 py-4 mb-6 border-l-4 border-[#4facfe]">
+                    <div className="bg-blue-50 rounded-xl px-4 sm:px-6 py-4 mb-6 border-l-4 border-[#4facfe]">
                       <p className="text-gray-700 mb-2">
-                        <span className="font-bold text-blue-800">初心者向けの広いミラー</span>（W810cm×H180cm）と、
-                        <span className="font-bold text-blue-800">SNS配信用の高輝度LED照明</span>を完備しています。
+                        <span className="font-bold text-blue-800 block sm:inline">初心者向けの広いミラー</span>
+                        <span className="hidden sm:inline">（W810cm×H180cm）</span>と、
+                        <span className="font-bold text-blue-800 block sm:inline mt-1 sm:mt-0">
+                          SNS配信用の高輝度LED照明
+                        </span>
+                        を完備しています。
                       </p>
                       <p className="text-gray-700">
                         ダンス練習はもちろん、ライブ前のリハーサルや動画撮影にも
                         <span className="relative inline-block">
                           <span className="relative z-10 font-bold">最適な環境</span>
-                          <span className="absolute bottom-0 left-0 w-full h-[8px] bg-yellow-200/60"></span>
+                          <span className="absolute bottom-0 left-0 w-full h-[8px] bg-yellow-200/60 z-[-1]"></span>
                         </span>
                         を整えています。
                       </p>

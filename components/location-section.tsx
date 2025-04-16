@@ -29,7 +29,7 @@ export default function LocationSection() {
 
             <p className="text-base sm:text-lg leading-loose max-w-2xl mx-auto">
               大阪メトロ玉造駅から徒歩2分、天王寺区の便利なロケーションに位置する当スタジオは、
-              <span className="highlight">アクセス抜群の立地</span>
+              <span className="highlight block sm:inline-block mt-1 sm:mt-0">アクセス抜群の立地</span>
               で、忙しい方でも気軽に通えます。
             </p>
           </motion.div>
@@ -68,9 +68,9 @@ export default function LocationSection() {
 
                 <p className="text-center text-gray-700 mb-6">
                   大阪市天王寺区玉造元町６−５にある当スタジオは、
-                  <span className="font-bold relative inline-block">
+                  <span className="font-bold relative">
                     <span className="relative z-10">玉造駅（大阪環状線）北口から徒歩2分</span>
-                    <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
+                    <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20 z-[-1]"></span>
                   </span>
                   の至便なロケーション。商店街に隣接し、セブンイレブンまで徒歩2分と利便性抜群です。
                 </p>

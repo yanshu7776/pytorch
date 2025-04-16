@@ -138,7 +138,7 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2, duration: 0.6 }}
-                          className="font-serif text-xs tracking-widest text-blue-200 uppercase mb-1 whitespace-nowrap overflow-hidden text-ellipsis"
+                          className="font-serif text-xs tracking-widest text-blue-200 uppercase mb-1 sm:whitespace-nowrap"
                         >
                           {slide.subtitle}
                         </motion.p>
@@ -148,7 +148,7 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.4, duration: 0.8 }}
-                          className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 whitespace-nowrap overflow-hidden text-ellipsis"
+                          className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:whitespace-nowrap"
                           style={{
                             textShadow: "0 2px 10px rgba(0,0,0,0.5)",
                           }}
@@ -161,7 +161,7 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6, duration: 0.8 }}
-                          className="text-base sm:text-lg text-white/90 mb-2 whitespace-nowrap overflow-hidden text-ellipsis"
+                          className="text-base sm:text-lg text-white/90 mb-2 sm:whitespace-nowrap"
                         >
                           {slide.description}
                         </motion.div>

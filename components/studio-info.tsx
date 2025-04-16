@@ -90,13 +90,13 @@ export default function StudioInfo() {
           >
             <div className="flex items-center justify-center mb-8">
               <div className="h-px bg-[#4facfe] w-16"></div>
-              <h3 className="text-2xl font-bold mx-4 text-gray-800">スタジオ詳細</h3>
+              <h3 className="text-2xl font-bold mx-4 text-gray-800 whitespace-nowrap">スタジオ詳細</h3>
               <div className="h-px bg-[#4facfe] w-16"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-10">
               <div>
-                <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center mb-4">
                   <Clock className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">営業時間</h4>
                 </div>
@@ -106,7 +106,7 @@ export default function StudioInfo() {
                   ※年中無休・当日予約可能
                 </p>
 
-                <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center mb-4">
                   <MapPin className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">アクセス</h4>
                 </div>
@@ -118,7 +118,7 @@ export default function StudioInfo() {
                   玉造駅から徒歩2分
                 </p>
 
-                <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center mb-4">
                   <CreditCard className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">料金プラン</h4>
                 </div>
@@ -132,7 +132,7 @@ export default function StudioInfo() {
               </div>
 
               <div>
-                <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center mb-4">
                   <Users className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">対象者</h4>
                 </div>
@@ -197,10 +197,7 @@ export default function StudioInfo() {
               ダンス・ヨガ・ピラティス・トレーニング・ライブ配信・ダンス動画撮影など様々な用途でご利用いただけます。
             </p>
             <p className="text-gray-700 text-center">
-              <span className="relative inline-block">
-                <span className="relative z-10">天王寺区で最も多目的に使えるレンタルスタジオです。</span>
-                <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
-              </span>
+              <span>天王寺区で最も多目的に使えるレンタルスタジオです。</span>
             </p>
           </motion.div>
 

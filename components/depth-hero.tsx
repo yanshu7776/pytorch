@@ -28,7 +28,7 @@ export default function DepthHero() {
     },
     {
       image: "/images/studio-5.jpeg",
-      title: "初心者から上級者まで利用できる空間",
+      title: "初心者から上級者まで\n利用できる空間", // 改行を追加
       subtitle: "FOR EVERYONE",
       description: "プロ仕様の環境で、あなたのダンスの可能性を広げる。",
     },
@@ -151,6 +151,7 @@ export default function DepthHero() {
                           className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:whitespace-nowrap"
                           style={{
                             textShadow: "0 2px 10px rgba(0,0,0,0.5)",
+                            whiteSpace: "pre-line", // 改行を反映させるために追加
                           }}
                         >
                           {slide.title}

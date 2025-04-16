@@ -151,7 +151,7 @@ export default function FaqSection() {
                       <span className="text-lg font-bold text-[#005BAC]">Q</span>
                     </div>
                     <div className="ml-3 flex-grow">
-                      <h3 className="text-base font-medium text-gray-900 pt-2">{faq.question}</h3>
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900 pt-2">{faq.question}</h3>
                     </div>
                   </div>
 
@@ -169,7 +169,7 @@ export default function FaqSection() {
                       <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-blue-200 rounded-sm bg-blue-50">
                         <span className="text-lg font-bold text-[#005BAC]">A</span>
                       </div>
-                      <div className="ml-3 flex-grow text-gray-700">{faq.answer}</div>
+                      <div className="ml-3 flex-grow text-base leading-loose space-y-6">{faq.answer}</div>
                     </div>
                   </motion.div>
                 </div>

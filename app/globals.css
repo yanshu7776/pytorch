@@ -58,7 +58,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 0.02em;
-    line-height: 2; /* 行間広めに設定 */
+    line-height: 1.7;
     overflow-x: hidden;
     font-size: 14px;
   }
@@ -74,97 +74,53 @@
   h4,
   h5,
   h6 {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+    @apply text-2xl font-bold text-gray-900;
     line-height: 1.4;
     margin-bottom: 0.75rem;
-    position: relative;
-  }
-
-  /* 見出しの下にライン追加 */
-  h1::after,
-  h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    margin: 0.5rem auto 1.5rem;
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    @apply text-3xl sm:text-4xl;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+    @apply text-2xl sm:text-3xl;
   }
 
   h3 {
-    @apply text-xl md:text-2xl;
-    line-height: 1.4;
-    margin-bottom: 0.75rem;
-  }
-
-  h4 {
-    @apply text-lg md:text-xl;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
+    @apply text-xl sm:text-2xl;
   }
 
   p {
-    @apply text-sm md:text-base;
-    line-height: 2; /* 行間広めに設定 */
+    @apply text-base leading-loose text-gray-700;
     margin-bottom: 1rem;
+  }
+
+  .section-block {
+    @apply py-10 md:py-16 relative space-y-6;
+  }
+
+  .container-wrapper {
+    @apply max-w-2xl mx-auto px-4 md:px-6;
+  }
+
+  .content-card {
+    @apply bg-white rounded-lg shadow-md p-6 md:p-8 mb-6 space-y-6;
+  }
+
+  /* 引用風ブロック */
+  blockquote {
+    @apply bg-blue-50 rounded-xl px-6 py-4 my-4;
+  }
+
+  /* 強調テキスト */
+  .highlight {
+    @apply text-blue-600 underline decoration-yellow-300 decoration-2;
   }
 }
 
-/* 中央揃え & 最大幅 */
-.content-center {
-  max-width: 800px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 引用風メッセージ */
-.quote {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.8;
-  color: #005bac;
-  background-color: rgba(0, 91, 172, 0.05);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  margin: 1.5rem 0;
-  position: relative;
-}
-
-.quote::before {
-  content: '"';
-  font-size: 3rem;
-  position: absolute;
-  top: -0.5rem;
-  left: 0.5rem;
-  color: rgba(0, 91, 172, 0.2);
-}
-
-.quote::after {
-  content: '"';
-  font-size: 3rem;
-  position: absolute;
-  bottom: -2rem;
-  right: 0.5rem;
-  color: rgba(0, 91, 172, 0.2);
-}
-
 /* Section and container styles */
-.section-block {
+/*.section-block {
   @apply py-10 md:py-16 relative;
 }
 
@@ -174,7 +130,7 @@
 
 .content-card {
   @apply bg-white rounded-lg shadow-md p-6 md:p-8 mb-6;
-}
+}*/
 
 /* Button styles */
 .cta-button {
@@ -246,17 +202,6 @@
 
   .content-card {
     @apply p-5;
-  }
-
-  /* モバイル向けの調整 */
-  .content-center {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .quote {
-    font-size: 1.1rem;
-    padding: 1.2rem;
   }
 }
 

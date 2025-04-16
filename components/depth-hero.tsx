@@ -148,9 +148,8 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.4, duration: 0.8 }}
-                          className="font-serif text-xl md:text-2xl font-bold text-white tracking-tight leading-tight mb-1"
+                          className="text-2xl sm:text-3xl font-bold text-white mb-1"
                           style={{
-                            fontFamily: "'Noto Serif JP', serif",
                             textShadow: "0 2px 10px rgba(0,0,0,0.5)",
                           }}
                         >
@@ -162,7 +161,7 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6, duration: 0.8 }}
-                          className="text-xs md:text-sm text-white/90 leading-snug mb-2"
+                          className="text-base sm:text-lg leading-loose text-white/90 mb-2 max-w-2xl mx-auto"
                         >
                           {slide.description}
                         </motion.p>

@@ -296,10 +296,10 @@ export default function Studio3DShowcase() {
         >
           <div className="flex items-center justify-center mb-4">
             <div className="h-px bg-[#4facfe] w-16"></div>
-            <h2 className="text-3xl font-bold mx-4 text-white">スタジオ3D体験</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mx-4 text-white">スタジオ3D体験</h2>
             <div className="h-px bg-[#4facfe] w-16"></div>
           </div>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg leading-loose text-gray-300 max-w-2xl mx-auto">
             インタラクティブな3Dモデルで、スタジオの設備をご覧ください。 要素にカーソルを合わせると詳細が表示されます。
           </p>
         </motion.div>
@@ -362,7 +362,7 @@ export default function Studio3DShowcase() {
                 ))}
               </ul>
 
-              <div className="mt-6 p-3 bg-blue-900/30 rounded-lg border border-blue-800/50">
+              <div className="mt-6 bg-blue-50 rounded-xl px-6 py-4 border border-blue-800/50">
                 <h4 className="font-medium text-blue-300 flex items-center mb-2">
                   <ZoomIn className="mr-2 h-4 w-4" />
                   操作ガイド

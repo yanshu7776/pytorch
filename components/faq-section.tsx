@@ -147,11 +147,11 @@ export default function FaqSection() {
                 <div key={index} className="border-b border-gray-100 pb-4">
                   {/* 質問 */}
                   <div className="flex cursor-pointer" onClick={() => toggleExpand(index)}>
-                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center border border-gray-200 rounded-sm">
-                      <span className="text-base sm:text-lg font-bold text-[#005BAC]">Q</span>
+                    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-sm">
+                      <span className="text-lg font-bold text-[#005BAC]">Q</span>
                     </div>
-                    <div className="ml-2 sm:ml-3 flex-grow">
-                      <h3 className="text-sm sm:text-base font-medium text-gray-900 pt-1 sm:pt-2">{faq.question}</h3>
+                    <div className="ml-3 flex-grow">
+                      <h3 className="text-base font-medium text-gray-900 pt-2">{faq.question}</h3>
                     </div>
                   </div>
 
@@ -166,12 +166,10 @@ export default function FaqSection() {
                     className="overflow-hidden"
                   >
                     <div className="flex mt-3">
-                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center border border-blue-200 rounded-sm bg-blue-50">
-                        <span className="text-base sm:text-lg font-bold text-[#005BAC]">A</span>
+                      <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-blue-200 rounded-sm bg-blue-50">
+                        <span className="text-lg font-bold text-[#005BAC]">A</span>
                       </div>
-                      <div className="ml-2 sm:ml-3 flex-grow text-gray-700">
-                        <div className="text-sm">{faq.answer}</div>
-                      </div>
+                      <div className="ml-3 flex-grow text-gray-700">{faq.answer}</div>
                     </div>
                   </motion.div>
                 </div>

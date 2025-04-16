@@ -232,14 +232,13 @@ export default function Navbar() {
               animate="open"
               exit="closed"
               className="md:hidden fixed inset-0 bg-white z-40 flex items-center justify-center"
-              style={{ overflowY: "auto", paddingTop: "2rem", paddingBottom: "2rem" }} // スクロール可能にする
             >
               <div className="container mx-auto px-4 py-6 flex flex-col items-center justify-center h-full">
                 {navLinks.map((link, index) => (
-                  <motion.div key={link.name} variants={linkVariants} className="my-4">
+                  <motion.div key={link.name} variants={linkVariants} className="my-3">
                     <a
                       href={link.href}
-                      className="text-gray-800 hover:text-[#4facfe] py-3 text-xl font-medium tracking-wide block text-center"
+                      className="text-gray-800 hover:text-[#4facfe] py-3 text-2xl font-medium tracking-wide block text-center"
                       onClick={(e) => handleLinkClick(e, link.href)}
                     >
                       {link.name}

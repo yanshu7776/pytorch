@@ -58,7 +58,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 0.02em;
-    line-height: 1.7;
+    line-height: 2; /* 行間広めに設定 */
     overflow-x: hidden;
     font-size: 14px;
   }
@@ -79,6 +79,18 @@
     letter-spacing: -0.01em;
     line-height: 1.4;
     margin-bottom: 0.75rem;
+    position: relative;
+  }
+
+  /* 見出しの下にライン追加 */
+  h1::after,
+  h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0.5rem auto 1.5rem;
   }
 
   h1 {
@@ -107,9 +119,48 @@
 
   p {
     @apply text-sm md:text-base;
-    line-height: 1.7;
+    line-height: 2; /* 行間広めに設定 */
     margin-bottom: 1rem;
   }
+}
+
+/* 中央揃え & 最大幅 */
+.content-center {
+  max-width: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 引用風メッセージ */
+.quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #005bac;
+  background-color: rgba(0, 91, 172, 0.05);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.quote::before {
+  content: '"';
+  font-size: 3rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+  color: rgba(0, 91, 172, 0.2);
+}
+
+.quote::after {
+  content: '"';
+  font-size: 3rem;
+  position: absolute;
+  bottom: -2rem;
+  right: 0.5rem;
+  color: rgba(0, 91, 172, 0.2);
 }
 
 /* Section and container styles */
@@ -189,82 +240,23 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* テキストサイズを調整 */
-  h1 {
-    @apply text-2xl;
-    line-height: 1.3;
-  }
-
-  h2 {
-    @apply text-xl;
-    line-height: 1.4;
-  }
-
-  h3 {
-    @apply text-lg;
-    line-height: 1.5;
-  }
-
-  p {
-    @apply text-sm;
-    line-height: 1.7;
-    margin-bottom: 0.8rem;
-  }
-
-  /* コンテナのパディングを調整 */
-  .container-wrapper {
-    @apply px-3;
-  }
-
-  /* カードのパディングを調整 */
-  .content-card {
-    @apply p-4;
-  }
-
-  /* セクション間の余白を調整 */
   .section-block {
-    @apply py-6;
+    @apply py-8;
   }
 
-  /* モバイルでのフォントの行間を微調整 */
-  body {
-    letter-spacing: 0.01em;
-    line-height: 1.6;
+  .content-card {
+    @apply p-5;
   }
 
-  /* リストアイテムのレイアウト調整 */
-  .flex.items-start {
-    align-items: flex-start;
+  /* モバイル向けの調整 */
+  .content-center {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  /* 長いテキストの単語区切りを改善 */
-  .text-wrap-anywhere {
-    overflow-wrap: anywhere;
-  }
-}
-
-/* さらに、スマホ専用の見やすさ改善用のスタイルを追加 */
-@media (max-width: 480px) {
-  /* 極小画面でのパディング調整 */
-  .container-wrapper {
-    @apply px-2;
-  }
-
-  /* 極小画面での改行調整 */
-  .mobile-line-break {
-    display: block;
-    margin-top: 0.3rem;
-  }
-
-  /* 極小画面での行間調整 */
-  p {
-    line-height: 1.8;
-  }
-
-  /* ボタンサイズの調整 */
-  .cta-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+  .quote {
+    font-size: 1.1rem;
+    padding: 1.2rem;
   }
 }
 
@@ -300,13 +292,10 @@
   z-index: 1;
 }
 
-/* マーカースタイル - 改善版 */
+/* マーカースタイル */
 .marker-highlight {
   position: relative;
   z-index: 1;
-  display: inline; /* インラインで表示するように修正 */
-  box-decoration-break: clone; /* 改行時にもマーカーが適用されるように */
-  padding: 0 2px; /* テキスト周りに少しスペースを追加 */
 }
 
 .marker-highlight::after {
@@ -315,55 +304,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 8px; /* モバイルでは少し薄くする */
+  height: 10px;
   background-color: rgba(79, 172, 254, 0.2);
   z-index: -1;
-}
-
-/* インラインでマーカーを表示するためのユーティリティクラス - 改善版 */
-.inline-marker {
-  position: relative;
-  display: inline;
-  background: linear-gradient(transparent 60%, rgba(79, 172, 254, 0.3) 40%);
-  padding: 0 2px;
-  font-weight: 500;
-}
-
-/* モバイル向け改行調整 - 改善版 */
-@media (max-width: 768px) {
-  /* 長いテキストの改行を改善 */
-  p,
-  .text-wrap {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    max-width: 100%;
-  }
-
-  /* モバイルでのマーカーの高さを調整 */
-  .marker-highlight::after {
-    height: 6px;
-  }
-
-  /* モバイルでの段落間隔を広げる */
-  p {
-    margin-bottom: 1.2rem;
-  }
-
-  /* モバイルの改行を強制する場合に使用するクラス - 改善版 */
-  .mobile-break {
-    display: block;
-    height: 0.5rem;
-    content: "";
-    width: 100%;
-  }
-}
-
-/* インラインの相対位置指定のスタイル修正 */
-.relative.inline-block {
-  display: inline-block;
-  max-width: 100%;
-  vertical-align: top;
 }
 
 @keyframes float {
@@ -381,194 +324,5 @@
   }
   100% {
     transform: translateY(0) translateX(0);
-  }
-}
-
-/* 新しく追加するユーティリティクラス */
-
-/* 強調表示のためのクラス */
-.highlight-text {
-  font-weight: 600;
-  color: #005bac;
-}
-
-/* 重要なテキストのためのクラス */
-.important-text {
-  font-weight: 700;
-  color: #333;
-  background: linear-gradient(transparent 70%, rgba(79, 172, 254, 0.3) 30%);
-  padding: 0 2px;
-  display: inline;
-}
-
-/* セクション区切りのためのクラス */
-.section-divider-text {
-  position: relative;
-  text-align: center;
-  margin: 1.5rem 0;
-  font-weight: 600;
-}
-
-.section-divider-text::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: rgba(0, 91, 172, 0.2);
-  z-index: 0;
-}
-
-.section-divider-text span {
-  position: relative;
-  background-color: white;
-  padding: 0 1rem;
-  z-index: 1;
-}
-
-/* カラーハイライトのためのクラス */
-.highlight-box {
-  background-color: rgba(0, 91, 172, 0.05);
-  border-left: 3px solid #005bac;
-  padding: 0.75rem 1rem;
-  margin: 1rem 0;
-  border-radius: 0 0.25rem 0.25rem 0;
-}
-
-/* モバイル向けの読みやすさ改善クラス */
-@media (max-width: 768px) {
-  /* モバイルでの文字間隔を広げる */
-  .mobile-text-spacing {
-    letter-spacing: 0.03em;
-    line-height: 1.8;
-  }
-
-  /* モバイルでの段落区切りを明確にする */
-  .mobile-paragraph {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  /* モバイルでの見出しの視認性を向上 */
-  .mobile-heading {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(0, 91, 172, 0.2);
-  }
-
-  /* モバイルでのリスト項目の間隔を広げる */
-  .mobile-list-item {
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  /* モバイルでのカード内のコンテンツ余白を調整 */
-  .mobile-card-content {
-    padding: 1rem !important;
-  }
-
-  /* モバイルでのテキストコントラストを向上 */
-  .mobile-high-contrast {
-    color: #000;
-    font-weight: 500;
-  }
-}
-
-/* テキストのコントラスト向上のためのクラス - 改善版 */
-.text-shadow-sm {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.text-shadow-md {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.text-shadow-lg {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* 新しく追加する視認性向上のためのクラス */
-.readable-text {
-  font-size: 1rem;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  .readable-text {
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-}
-
-/* 段落の区切りを明確にするクラス */
-.paragraph-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(0, 91, 172, 0.2), transparent);
-  margin: 1.5rem 0;
-}
-
-/* 重要なポイントを強調するためのリストスタイル */
-.feature-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.feature-list li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.feature-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #005bac;
-  font-weight: bold;
-}
-
-/* 背景色付きの強調ボックス */
-.emphasis-box {
-  background-color: rgba(0, 91, 172, 0.05);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 1px solid rgba(0, 91, 172, 0.1);
-}
-
-.emphasis-box-title {
-  font-weight: 600;
-  color: #005bac;
-  margin-bottom: 0.5rem;
-}
-
-/* モバイル向けの視認性向上クラス */
-@media (max-width: 768px) {
-  /* モバイルでの文字サイズを少し大きくする */
-  .mobile-larger-text {
-    font-size: 1.05rem;
-  }
-
-  /* モバイルでの行間を広げる */
-  .mobile-line-height {
-    line-height: 1.9;
-  }
-
-  /* モバイルでの文字の太さを調整 */
-  .mobile-font-medium {
-    font-weight: 500;
-  }
-
-  /* モバイルでの背景色付きテキスト */
-  .mobile-bg-text {
-    background-color: rgba(0, 91, 172, 0.05);
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
   }
 }

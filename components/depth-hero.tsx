@@ -148,24 +148,13 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.4, duration: 0.8 }}
-                          className="font-serif text-lg md:text-2xl font-bold text-white tracking-tight leading-tight mb-1"
+                          className="font-serif text-xl md:text-2xl font-bold text-white tracking-tight leading-tight mb-1"
                           style={{
                             fontFamily: "'Noto Serif JP', serif",
-                            textShadow: "0 2px 10px rgba(0,0,0,0.8)", // シャドウを強くして視認性アップ
-                            wordBreak: "keep-all", // 不自然な改行を防止
-                            overflow: "hidden", // はみ出し防止
+                            textShadow: "0 2px 10px rgba(0,0,0,0.5)",
                           }}
                         >
-                          {/* モバイルで長いタイトルを適切に表示 */}
-                          {slide.title.length > 15 && window.innerWidth < 640 ? (
-                            <>
-                              {slide.title.slice(0, 15)}
-                              <br />
-                              {slide.title.slice(15)}
-                            </>
-                          ) : (
-                            slide.title
-                          )}
+                          {slide.title}
                         </motion.h1>
 
                         {/* 説明文 - タイトルの下に配置 */}
@@ -174,21 +163,8 @@ export default function DepthHero() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6, duration: 0.8 }}
                           className="text-xs md:text-sm text-white/90 leading-snug mb-2"
-                          style={{
-                            textShadow: "0 1px 3px rgba(0,0,0,0.7)", // テキストシャドウを追加して視認性アップ
-                            maxWidth: "100%", // はみ出し防止
-                          }}
                         >
-                          {/* モバイルで長い説明文を適切に表示 */}
-                          {window.innerWidth < 640 && slide.description.length > 25 ? (
-                            <>
-                              {slide.description.slice(0, 25)}
-                              <br />
-                              {slide.description.slice(25)}
-                            </>
-                          ) : (
-                            slide.description
-                          )}
+                          {slide.description}
                         </motion.p>
 
                         {/* CTAボタン */}

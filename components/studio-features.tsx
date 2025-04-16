@@ -4,30 +4,25 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Check } from "lucide-react"
 
 export default function StudioFeatures() {
   return (
     <section id="features" className="py-20 bg-[#f8f9fa]">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="content-center">
           {/* ヘッダー */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="mb-16"
           >
-            <div className="flex items-center justify-center mb-4">
-              <div className="h-px bg-[#4facfe] w-16"></div>
-              <h2 className="text-3xl font-bold mx-4 text-gray-800">当スタジオが選ばれる理由</h2>
-              <div className="h-px bg-[#4facfe] w-16"></div>
-            </div>
-            <div className="emphasis-box">
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto mobile-text-spacing">
-                <strong>プロ仕様の設備を完備した、ダンス練習に最適な環境をご提供します</strong>
-              </p>
-            </div>
+            <h2 className="text-3xl font-bold text-gray-800">当スタジオが選ばれる理由</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              プロ仕様の設備を完備した、ダンス練習に最適な環境をご提供します
+            </p>
           </motion.div>
 
           {/* 3カラムの特徴紹介 */}
@@ -44,15 +39,11 @@ export default function StudioFeatures() {
                 <Image src="/images/studio-1.jpeg" alt="清潔できれいなスタジオ" fill className="object-cover" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-center text-gray-800 mobile-heading">清潔できれい</h3>
-                <div className="emphasis-box">
-                  <p className="text-gray-700 text-center mb-4 mobile-text-spacing">
-                    <strong>最新のリフォームで生まれ変わった、清潔感あふれるスタジオです。</strong>
-                  </p>
-                  <p className="text-gray-700 text-center mobile-text-spacing">
-                    スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold mb-4 text-center text-gray-800">清潔できれい</h3>
+                <div className="quote">「最新のリフォームで生まれ変わった、清潔感あふれるスタジオです！」</div>
+                <p className="text-gray-700 text-center">
+                  スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。
+                </p>
               </div>
             </motion.div>
 
@@ -68,18 +59,12 @@ export default function StudioFeatures() {
                 <Image src="/images/studio-blue-led.jpeg" alt="充実した設備" fill className="object-cover" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-center text-gray-800 mobile-heading">充実した設備</h3>
-                <div className="emphasis-box">
-                  <p className="text-gray-700 text-center mb-4 mobile-text-spacing">
-                    <strong>3.6mの大型鏡に、気分を盛り上げるLEDライト完備</strong>
-                  </p>
-                  <p className="text-gray-700 text-center mobile-text-spacing">
-                    ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。
-                  </p>
-                  <p className="text-gray-700 text-center mt-4 mobile-text-spacing">
-                    <strong>更衣室・トイレもあり快適にご利用頂けます。</strong>
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold mb-4 text-center text-gray-800">充実した設備</h3>
+                <div className="quote">「3.6mの大型鏡に、気分を盛り上げるLEDライト完備！」</div>
+                <p className="text-gray-700 text-center">
+                  ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。
+                  更衣室・トイレもあり快適にご利用頂けます。
+                </p>
               </div>
             </motion.div>
 
@@ -95,17 +80,9 @@ export default function StudioFeatures() {
                 <Image src="/images/studio-2.jpeg" alt="リーズナブルな料金" fill className="object-cover" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-center text-gray-800 mobile-heading">リーズナブル</h3>
-                <div className="emphasis-box">
-                  <p className="text-gray-700 text-center mb-4 mobile-text-spacing">
-                    <strong>245円〜/30分というお手頃価格</strong>から、高品質なスタジオを利用できます。
-                  </p>
-                  <p className="text-gray-700 text-center mobile-text-spacing">
-                    <span className="inline-marker">定期利用をご利用いただくと</span>
-                    <span className="mobile-break"></span>
-                    <strong>更にお得にご利用可能です。</strong>
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold mb-4 text-center text-gray-800">リーズナブル</h3>
+                <div className="quote">「245円〜/30分というお手頃価格から、高品質なスタジオを利用できます！」</div>
+                <p className="text-gray-700 text-center">定期利用をご利用いただくと更にお得にご利用可能です。</p>
               </div>
             </motion.div>
           </div>
@@ -136,60 +113,39 @@ export default function StudioFeatures() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold mb-6 text-gray-800 mobile-heading">充実の設備</h3>
-                    <div className="emphasis-box">
-                      <p className="text-gray-700 mb-6 mobile-text-spacing">
-                        <strong className="mobile-high-contrast">天王寺区で格安のレンタルスタジオ</strong>をお探しなら、
-                        <span className="md:hidden mobile-break"></span>
-                        玉造駅から徒歩2分の当スタジオがおすすめです。
-                        <span className="md:hidden mobile-break"></span>
-                        <strong className="mobile-high-contrast">35㎡の広々とした空間</strong>
-                        で、グループレッスンやチーム練習に最適。
-                        <span className="md:hidden mobile-break"></span>
-                        24時間いつでも利用可能で当日予約もOKです。
-                      </p>
+                    <h3 className="text-xl font-bold mb-6 text-gray-800">充実の設備</h3>
+                    <div className="quote">
+                      「天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです！」
                     </div>
+                    <p className="text-gray-700 mb-6">
+                      35㎡の広々とした空間で、グループレッスンやチーム練習に最適。24時間いつでも利用可能で当日予約もOKです。
+                    </p>
                     <div className="p-6 bg-blue-50 rounded-lg border-l-4 border-[#4facfe] mb-6">
-                      <p className="text-gray-700 mb-2 mobile-text-spacing">
-                        <span className="font-bold text-blue-800">初心者向けの広いミラー</span>
-                        <span className="md:hidden mobile-break"></span>
-                        （W810cm×H180cm）と、
-                        <span className="md:hidden mobile-break"></span>
+                      <p className="text-gray-700 mb-2">
+                        <span className="font-bold text-blue-800">初心者向けの広いミラー</span>（W810cm×H180cm）と、
                         <span className="font-bold text-blue-800">SNS配信用の高輝度LED照明</span>を完備しています。
                       </p>
-                      <p className="text-gray-700 mobile-text-spacing">
-                        ダンス練習はもちろん、
-                        <span className="md:hidden mobile-break"></span>
-                        ライブ前のリハーサルや動画撮影にも
-                        <span
-                          className="relative inline-block font-bold"
-                          style={{
-                            background: "linear-gradient(transparent 60%, rgba(250, 204, 21, 0.4) 40%)",
-                            padding: "0 2px",
-                            display: "inline",
-                          }}
-                        >
-                          最適な環境
+                      <p className="text-gray-700">
+                        ダンス練習はもちろん、ライブ前のリハーサルや動画撮影にも
+                        <span className="relative inline-block">
+                          <span className="relative z-10 font-bold">最適な環境</span>
+                          <span className="absolute bottom-0 left-0 w-full h-[8px] bg-yellow-200/60"></span>
                         </span>
-                        <span className="md:hidden mobile-break"></span>
                         を整えています。
                       </p>
                     </div>
-                    <ul className="feature-list">
-                      <li className="mobile-list-item">
-                        <span className="mobile-text-spacing">
-                          <strong>全面鏡張りの壁（W810cm×H180cm）</strong> - プロ仕様の広々ミラー
-                        </span>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-start">
+                        <Check className="mr-2 h-5 w-5 text-[#4facfe] flex-shrink-0 mt-0.5" />
+                        <span>全面鏡張りの壁（W810cm×H180cm）- プロ仕様の広々ミラー</span>
                       </li>
-                      <li className="mobile-list-item">
-                        <span className="mobile-text-spacing">
-                          <strong>Bluetooth®搭載スピーカー</strong> - 高音質で音楽練習に最適
-                        </span>
+                      <li className="flex items-start">
+                        <Check className="mr-2 h-5 w-5 text-[#4facfe] flex-shrink-0 mt-0.5" />
+                        <span>Bluetooth®搭載スピーカー - 高音質で音楽練習に最適</span>
                       </li>
-                      <li className="mobile-list-item">
-                        <span className="mobile-text-spacing">
-                          <strong>高輝度LED照明4台</strong> - SNS映えする動画撮影が可能
-                        </span>
+                      <li className="flex items-start">
+                        <Check className="mr-2 h-5 w-5 text-[#4facfe] flex-shrink-0 mt-0.5" />
+                        <span>高輝度LED照明4台 - SNS映えする動画撮影が可能</span>
                       </li>
                     </ul>
                   </div>
@@ -263,10 +219,8 @@ export default function StudioFeatures() {
                     priority
                   />
                 </div>
-                <p className="text-gray-700 text-center mb-6 mobile-text-spacing">
-                  <strong>
-                    スタジオのフロアマップです。広々とした練習スペースと充実した設備をご確認いただけます。
-                  </strong>
+                <p className="text-gray-700 text-center mb-6">
+                  スタジオのフロアマップです。広々とした練習スペースと充実した設備をご確認いただけます。
                 </p>
               </div>
 
@@ -276,35 +230,35 @@ export default function StudioFeatures() {
                     <tbody>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center w-1/3">面積</td>
-                        <td className="py-3 px-4 mobile-high-contrast">35㎡</td>
+                        <td className="py-3 px-4">35㎡</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center">天井高</td>
-                        <td className="py-3 px-4 mobile-high-contrast">2.25m</td>
+                        <td className="py-3 px-4">2.25m</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center">床</td>
-                        <td className="py-3 px-4 mobile-high-contrast">リノリウム</td>
+                        <td className="py-3 px-4">リノリウム</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center">鏡</td>
-                        <td className="py-3 px-4 mobile-high-contrast">W810cm×H180cm</td>
+                        <td className="py-3 px-4">W810cm×H180cm</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center">照明</td>
-                        <td className="py-3 px-4 mobile-high-contrast">高輝度LED４台</td>
+                        <td className="py-3 px-4">高輝度LED４台</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center">音響</td>
-                        <td className="py-3 px-4 mobile-high-contrast">Bluetooth®搭載スピーカー</td>
+                        <td className="py-3 px-4">Bluetooth®搭載スピーカー</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center">更衣スペース</td>
-                        <td className="py-3 px-4 mobile-high-contrast">あり</td>
+                        <td className="py-3 px-4">あり</td>
                       </tr>
                       <tr>
                         <td className="py-3 px-4 bg-gray-50 font-medium text-center">無料備品</td>
-                        <td className="py-3 px-4 mobile-high-contrast">
+                        <td className="py-3 px-4">
                           Bluetooth®搭載スピーカー
                           <br />
                           椅子（10脚）

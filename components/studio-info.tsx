@@ -222,7 +222,11 @@ export default function StudioInfo() {
 
           {/* 予約ボタン */}
           <div className="text-center">
-            <p className="text-base font-medium mb-4">＼ スペースマーケットで簡単予約！30秒でサクッと予約完了 ／</p>
+            <p className="text-base font-medium mb-4">
+              ＼ スペースマーケットで簡単予約！
+              <br className="sm:hidden" />
+              30秒でサクッと予約完了 ／
+            </p>
             <Link
               href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
               className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"

@@ -237,7 +237,9 @@ export default function Home() {
               {/* 追加情報 */}
               <div className="mt-12 text-center">
                 <p className="text-white/80 text-sm">
-                  ご不明な点がございましたら、お気軽にお問い合わせください。
+                  ご不明な点がございましたら、
+                  <br className="sm:hidden" />
+                  お気軽にお問い合わせください。
                   <br />
                   <a
                     href="mailto:info@beyond-dance.jp"

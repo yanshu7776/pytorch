@@ -188,7 +188,9 @@ export default function FaqSection() {
           {/* 追加情報 */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600">
-              その他ご不明な点がございましたら、お気軽に
+              その他ご不明な点がございましたら、
+              <br className="sm:hidden" />
+              お気軽に
               <Link href="#contact" className="text-[#005BAC] hover:underline mx-1">
                 お問い合わせ
               </Link>

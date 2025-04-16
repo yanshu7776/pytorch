@@ -27,15 +27,17 @@ export default function LocationSection() {
               <div className="h-px bg-[#4facfe] w-16"></div>
             </div>
 
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              大阪メトロ玉造駅から徒歩2分、
-              <span className="md:hidden mobile-break"></span>
-              天王寺区の便利なロケーションに位置する当スタジオは、
-              <span className="md:hidden mobile-break"></span>
-              <span className="inline-marker">アクセス抜群の立地</span>
-              <span className="md:hidden mobile-break"></span>
-              で、忙しい方でも気軽に通えます。
-            </p>
+            <div className="emphasis-box">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto mobile-text-spacing">
+                大阪メトロ玉造駅から徒歩2分、
+                <span className="md:hidden mobile-break"></span>
+                天王寺区の便利なロケーションに位置する当スタジオは、
+                <span className="md:hidden mobile-break"></span>
+                <span className="inline-marker">アクセス抜群の立地</span>
+                <span className="md:hidden mobile-break"></span>
+                で、忙しい方でも気軽に通えます。
+              </p>
+            </div>
           </motion.div>
 
           {/* 地図と情報 - 中央揃えのカード */}
@@ -70,15 +72,17 @@ export default function LocationSection() {
 
                 <h3 className="text-xl font-bold text-center mb-6 text-gray-800">玉造駅徒歩2分の好立地！</h3>
 
-                <p className="text-center text-gray-700 mb-6">
-                  大阪市天王寺区玉造元町６−５にある当スタジオは、
-                  <span className="md:hidden mobile-break"></span>
-                  <span className="inline-marker font-bold">玉造駅（大阪環状線）北口から徒歩2分</span>
-                  <span className="md:hidden mobile-break"></span>
-                  の至便なロケーション。
-                  <span className="md:hidden mobile-break"></span>
-                  商店街に隣接し、セブンイレブンまで徒歩2分と利便性抜群です。
-                </p>
+                <div className="emphasis-box">
+                  <p className="text-center text-gray-700 mb-6 mobile-text-spacing">
+                    大阪市天王寺区玉造元町６−５にある当スタジオは、
+                    <span className="md:hidden mobile-break"></span>
+                    <span className="important-text">玉造駅（大阪環状線）北口から徒歩2分</span>
+                    <span className="md:hidden mobile-break"></span>
+                    の至便なロケーション。
+                    <span className="md:hidden mobile-break"></span>
+                    商店街に隣接し、セブンイレブンまで徒歩2分と利便性抜群です。
+                  </p>
+                </div>
 
                 <div className="grid md:grid-cols-2 gap-8 mt-10">
                   <div className="text-center">
@@ -88,8 +92,8 @@ export default function LocationSection() {
                       </div>
                     </div>
                     <h4 className="font-bold text-gray-800 mb-3">交通手段</h4>
-                    <p className="text-gray-700 text-sm">
-                      大阪メトロ 長堀鶴見緑地線・中央線「玉造駅」から徒歩2分
+                    <p className="text-gray-700 text-sm mobile-text-spacing">
+                      <strong>大阪メトロ 長堀鶴見緑地線・中央線「玉造駅」から徒歩2分</strong>
                       <br />
                       JR環状線「玉造駅」から徒歩5分
                     </p>
@@ -102,8 +106,8 @@ export default function LocationSection() {
                       </div>
                     </div>
                     <h4 className="font-bold text-gray-800 mb-3">営業時間</h4>
-                    <p className="text-gray-700 text-sm">
-                      24時間営業
+                    <p className="text-gray-700 text-sm mobile-text-spacing">
+                      <strong>24時間営業</strong>
                       <br />
                       年中無休・当日予約可能
                     </p>
@@ -120,28 +124,28 @@ export default function LocationSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-white rounded-xl shadow-md p-8 mb-10"
           >
-            <h4 className="font-bold text-gray-800 text-center mb-6">主要駅からのアクセス</h4>
+            <h4 className="font-bold text-gray-800 text-center mb-6 mobile-heading">主要駅からのアクセス</h4>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="text-center p-4 bg-[#f8f9fa] rounded-lg">
                 <div className="font-bold text-[#4facfe] mb-2">鶴橋駅</div>
-                <p className="text-sm text-gray-700">
-                  徒歩9分
+                <p className="text-sm text-gray-700 mobile-text-spacing">
+                  <strong>徒歩9分</strong>
                   <br />
                   (近鉄線アクセスに便利)
                 </p>
               </div>
               <div className="text-center p-4 bg-[#f8f9fa] rounded-lg">
                 <div className="font-bold text-[#4facfe] mb-2">森ノ宮駅</div>
-                <p className="text-sm text-gray-700">
-                  徒歩15分
+                <p className="text-sm text-gray-700 mobile-text-spacing">
+                  <strong>徒歩15分</strong>
                   <br />
                   (ビジネス街からの利用に最適)
                 </p>
               </div>
               <div className="text-center p-4 bg-[#f8f9fa] rounded-lg">
                 <div className="font-bold text-[#4facfe] mb-2">大阪上本町駅</div>
-                <p className="text-sm text-gray-700">
-                  徒歩20分
+                <p className="text-sm text-gray-700 mobile-text-spacing">
+                  <strong>徒歩20分</strong>
                   <br />
                   (近鉄難波線利用者向け)
                 </p>
@@ -156,26 +160,32 @@ export default function LocationSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-white rounded-xl shadow-md p-8"
           >
-            <h4 className="font-bold text-gray-800 text-center mb-6">道案内のポイント</h4>
+            <h4 className="font-bold text-gray-800 text-center mb-6 mobile-heading">道案内のポイント</h4>
             <div className="max-w-md mx-auto">
               <ol className="space-y-4">
-                <li className="flex items-center">
+                <li className="flex items-center mobile-list-item">
                   <div className="w-8 h-8 bg-[#4facfe] rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
                     1
                   </div>
-                  <span>JR玉造駅北口を出て西へ進む</span>
+                  <span className="mobile-text-spacing">
+                    <strong>JR玉造駅北口を出て西へ進む</strong>
+                  </span>
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center mobile-list-item">
                   <div className="w-8 h-8 bg-[#4facfe] rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
                     2
                   </div>
-                  <span>パチンコ屋の駐輪場を右折</span>
+                  <span className="mobile-text-spacing">
+                    <strong>パチンコ屋の駐輪場を右折</strong>
+                  </span>
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center mobile-list-item">
                   <div className="w-8 h-8 bg-[#4facfe] rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
                     3
                   </div>
-                  <span>2階建てビルの2階がスタジオ</span>
+                  <span className="mobile-text-spacing">
+                    <strong>2階建てビルの2階がスタジオ</strong>
+                  </span>
                 </li>
               </ol>
             </div>

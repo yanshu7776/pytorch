@@ -300,7 +300,7 @@
   z-index: 1;
 }
 
-/* マーカースタイル */
+/* マーカースタイル - 改善版 */
 .marker-highlight {
   position: relative;
   z-index: 1;
@@ -320,15 +320,16 @@
   z-index: -1;
 }
 
-/* インラインでマーカーを表示するためのユーティリティクラス */
+/* インラインでマーカーを表示するためのユーティリティクラス - 改善版 */
 .inline-marker {
   position: relative;
   display: inline;
-  background: linear-gradient(transparent 60%, rgba(79, 172, 254, 0.2) 40%);
+  background: linear-gradient(transparent 60%, rgba(79, 172, 254, 0.3) 40%);
   padding: 0 2px;
+  font-weight: 500;
 }
 
-/* モバイル向け改行調整 */
+/* モバイル向け改行調整 - 改善版 */
 @media (max-width: 768px) {
   /* 長いテキストの改行を改善 */
   p,
@@ -349,10 +350,12 @@
     margin-bottom: 1.2rem;
   }
 
-  /* モバイルの改行を強制する場合に使用するクラス */
+  /* モバイルの改行を強制する場合に使用するクラス - 改善版 */
   .mobile-break {
     display: block;
-    margin-top: 0.5rem;
+    height: 0.5rem;
+    content: "";
+    width: 100%;
   }
 }
 
@@ -381,59 +384,101 @@
   }
 }
 
-/* 最後にこれらのユーティリティクラスを追加 */
+/* 新しく追加するユーティリティクラス */
 
-/* モバイル向けのテキスト改行と表示改善のためのクラス */
-.text-responsive {
-  max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+/* 強調表示のためのクラス */
+.highlight-text {
+  font-weight: 600;
+  color: #005bac;
 }
 
-/* モバイルでのコンテンツ間隔調整 */
+/* 重要なテキストのためのクラス */
+.important-text {
+  font-weight: 700;
+  color: #333;
+  background: linear-gradient(transparent 70%, rgba(79, 172, 254, 0.3) 30%);
+  padding: 0 2px;
+  display: inline;
+}
+
+/* セクション区切りのためのクラス */
+.section-divider-text {
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: 600;
+}
+
+.section-divider-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(0, 91, 172, 0.2);
+  z-index: 0;
+}
+
+.section-divider-text span {
+  position: relative;
+  background-color: white;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+/* カラーハイライトのためのクラス */
+.highlight-box {
+  background-color: rgba(0, 91, 172, 0.05);
+  border-left: 3px solid #005bac;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+/* モバイル向けの読みやすさ改善クラス */
 @media (max-width: 768px) {
-  .mobile-spacing > * + * {
-    margin-top: 1rem;
-  }
-
-  .mobile-compact {
-    padding: 0.75rem !important;
-  }
-
-  /* モバイルでの長いテキストフィールドの表示改善 */
-  .mobile-wrap-text {
-    word-break: keep-all;
-    hyphens: auto;
+  /* モバイルでの文字間隔を広げる */
+  .mobile-text-spacing {
+    letter-spacing: 0.03em;
     line-height: 1.8;
   }
 
-  /* フレックスアイテムをモバイルで縦並びに */
-  .mobile-stack {
-    flex-direction: column;
+  /* モバイルでの段落区切りを明確にする */
+  .mobile-paragraph {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  .mobile-stack > * + * {
-    margin-top: 0.75rem;
-    margin-left: 0 !important;
+  /* モバイルでの見出しの視認性を向上 */
+  .mobile-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 91, 172, 0.2);
   }
 
-  /* テーブルのモバイル表示改善 */
-  .mobile-table-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: 0 -1rem;
-    padding: 0 1rem;
+  /* モバイルでのリスト項目の間隔を広げる */
+  .mobile-list-item {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
-  /* マーカーのモバイル表示を改善 */
-  .mobile-marker-fix {
-    background: linear-gradient(transparent 70%, rgba(79, 172, 254, 0.2) 30%);
-    display: inline;
-    padding: 0 2px;
+  /* モバイルでのカード内のコンテンツ余白を調整 */
+  .mobile-card-content {
+    padding: 1rem !important;
+  }
+
+  /* モバイルでのテキストコントラストを向上 */
+  .mobile-high-contrast {
+    color: #000;
+    font-weight: 500;
   }
 }
 
-/* テキストのコントラスト向上のためのクラス */
+/* テキストのコントラスト向上のためのクラス - 改善版 */
 .text-shadow-sm {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -444,4 +489,86 @@
 
 .text-shadow-lg {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 新しく追加する視認性向上のためのクラス */
+.readable-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .readable-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* 段落の区切りを明確にするクラス */
+.paragraph-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 91, 172, 0.2), transparent);
+  margin: 1.5rem 0;
+}
+
+/* 重要なポイントを強調するためのリストスタイル */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #005bac;
+  font-weight: bold;
+}
+
+/* 背景色付きの強調ボックス */
+.emphasis-box {
+  background-color: rgba(0, 91, 172, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(0, 91, 172, 0.1);
+}
+
+.emphasis-box-title {
+  font-weight: 600;
+  color: #005bac;
+  margin-bottom: 0.5rem;
+}
+
+/* モバイル向けの視認性向上クラス */
+@media (max-width: 768px) {
+  /* モバイルでの文字サイズを少し大きくする */
+  .mobile-larger-text {
+    font-size: 1.05rem;
+  }
+
+  /* モバイルでの行間を広げる */
+  .mobile-line-height {
+    line-height: 1.9;
+  }
+
+  /* モバイルでの文字の太さを調整 */
+  .mobile-font-medium {
+    font-weight: 500;
+  }
+
+  /* モバイルでの背景色付きテキスト */
+  .mobile-bg-text {
+    background-color: rgba(0, 91, 172, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
 }

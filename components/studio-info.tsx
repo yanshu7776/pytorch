@@ -20,13 +20,15 @@ export default function StudioInfo() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">玉造ダンススタジオBeyond</h2>
             <p className="text-xl text-gray-700 mb-6">ダンスやヨガに最適なレンタルスペース</p>
 
-            <p className="text-gray-700 mb-6">
-              天王寺区で最も便利なレンタルスタジオ。
-              {/* モバイル向けに改行とマーカースタイルを修正 */}
-              <span className="inline-marker">玉造駅から徒歩2分の好立地</span>
-              <span className="md:hidden mobile-break"></span>
-              で、当日予約も可能なダンス練習場です。
-            </p>
+            <div className="emphasis-box">
+              <p className="mobile-text-spacing">
+                <strong className="mobile-high-contrast">天王寺区で最も便利なレンタルスタジオ。</strong>
+                <br className="md:hidden" />
+                <span className="inline-marker">玉造駅から徒歩2分の好立地</span>
+                <span className="md:hidden mobile-break"></span>
+                で、当日予約も可能なダンス練習場です。
+              </p>
+            </div>
           </motion.div>
 
           {/* 基本情報カード */}
@@ -44,7 +46,7 @@ export default function StudioInfo() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-800">24時間営業</h3>
-              <p className="text-gray-600">当日予約可能なダンススタジオ</p>
+              <p className="text-gray-600 mobile-text-spacing">当日予約可能なダンススタジオ</p>
             </motion.div>
 
             <motion.div
@@ -60,7 +62,7 @@ export default function StudioInfo() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-800">駅近アクセス</h3>
-              <p className="text-gray-600">玉造駅から徒歩2分の好立地</p>
+              <p className="text-gray-600 mobile-text-spacing">玉造駅から徒歩2分の好立地</p>
             </motion.div>
 
             <motion.div
@@ -76,7 +78,7 @@ export default function StudioInfo() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-800">格安料金</h3>
-              <p className="text-gray-600">大阪で格安のダンスレンタル</p>
+              <p className="text-gray-600 mobile-text-spacing">大阪で格安のダンスレンタル</p>
             </motion.div>
           </div>
 
@@ -100,35 +102,41 @@ export default function StudioInfo() {
                   <Clock className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">営業時間</h4>
                 </div>
-                <p className="text-gray-700 mb-6 pl-8">
-                  24時間営業
-                  <br />
-                  ※年中無休・当日予約可能
-                </p>
+                <div className="highlight-box">
+                  <p className="text-gray-700 mb-6 pl-8 mobile-text-spacing">
+                    <strong>24時間営業</strong>
+                    <br />
+                    ※年中無休・当日予約可能
+                  </p>
+                </div>
 
                 <div className="flex items-center mb-4">
                   <MapPin className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">アクセス</h4>
                 </div>
-                <p className="text-gray-700 mb-6 pl-8">
-                  〒543-0071
-                  <br />
-                  大阪府大阪市天王寺区玉造元町６−５
-                  <br />
-                  玉造駅から徒歩2分
-                </p>
+                <div className="highlight-box">
+                  <p className="text-gray-700 mb-6 pl-8 mobile-text-spacing">
+                    〒543-0071
+                    <br />
+                    <strong>大阪府大阪市天王寺区玉造元町６−５</strong>
+                    <br />
+                    <em className="not-italic font-medium">玉造駅から徒歩2分</em>
+                  </p>
+                </div>
 
                 <div className="flex items-center mb-4">
                   <CreditCard className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">料金プラン</h4>
                 </div>
-                <p className="text-gray-700 mb-6 pl-8">
-                  平日1時間：¥1,500〜
-                  <br />
-                  土日祝1時間：¥1,800〜
-                  <br />
-                  <span className="text-[#4facfe] font-medium">格安ダンスレンタル・長時間割引あり</span>
-                </p>
+                <div className="highlight-box">
+                  <p className="text-gray-700 mb-6 pl-8 mobile-text-spacing">
+                    平日1時間：<strong>¥1,500〜</strong>
+                    <br />
+                    土日祝1時間：<strong>¥1,800〜</strong>
+                    <br />
+                    <span className="text-[#4facfe] font-medium">格安ダンスレンタル・長時間割引あり</span>
+                  </p>
+                </div>
               </div>
 
               <div>
@@ -136,53 +144,38 @@ export default function StudioInfo() {
                   <Users className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">対象者</h4>
                 </div>
-                <p className="text-gray-700 mb-6 pl-8">
-                  <span className="bg-gradient-to-r from-[#4facfe] to-[#00f2fe] bg-clip-text text-transparent font-bold block mb-4">
-                    「玉造で始める、自由な表現の場」
-                  </span>
-                  玉造ダンススタジオBeyondは、
-                  <span className="font-bold">初心者からプロまで対応</span>
-                  <span className="md:hidden mobile-break"></span>
-                  する多目的レンタルスペース。
-                  <span className="md:hidden mobile-break"></span>
-                  ダンス・ヨガ・動画撮影など、
-                  <span className="md:hidden mobile-break"></span>
-                  クリエイティブな活動を支える環境を提供します。
-                </p>
+                <div className="emphasis-box">
+                  <p className="emphasis-box-title">「玉造で始める、自由な表現の場」</p>
+                  <p className="text-gray-700 mb-6 mobile-text-spacing">
+                    玉造ダンススタジオBeyondは、
+                    <strong className="important-text">初心者からプロまで対応</strong>
+                    <span className="md:hidden mobile-break"></span>
+                    する多目的レンタルスペース。
+                    <span className="md:hidden mobile-break"></span>
+                    ダンス・ヨガ・動画撮影など、
+                    <span className="md:hidden mobile-break"></span>
+                    クリエイティブな活動を支える環境を提供します。
+                  </p>
+                </div>
 
                 <div className="bg-[#f8f9fa] p-5 rounded-lg mb-6">
-                  <h5 className="font-bold text-[#4facfe] mb-4 text-center">3つの特徴</h5>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#4facfe] text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-xs">
-                        1
-                      </div>
-                      <div className="flex-1">
-                        <h6 className="font-bold text-gray-800 text-sm inline-block min-w-[120px]">即日予約可能</h6>
-                        <p className="text-xs text-gray-600">当日の空室状況をリアルタイム表示</p>
-                      </div>
-                    </div>
+                  <h5 className="font-bold text-[#4facfe] mb-4 text-center mobile-heading">3つの特徴</h5>
+                  <ul className="feature-list">
+                    <li className="mobile-list-item">
+                      <strong className="mobile-high-contrast">即日予約可能</strong>
+                      <p className="text-xs text-gray-600 mt-1">当日の空室状況をリアルタイム表示</p>
+                    </li>
 
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#4facfe] text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-xs">
-                        2
-                      </div>
-                      <div className="flex-1">
-                        <h6 className="font-bold text-gray-800 text-sm inline-block min-w-[120px]">完全防音設計</h6>
-                        <p className="text-xs text-gray-600">深夜練習も近隣への配慮</p>
-                      </div>
-                    </div>
+                    <li className="mobile-list-item">
+                      <strong className="mobile-high-contrast">完全防音設計</strong>
+                      <p className="text-xs text-gray-600 mt-1">深夜練習も近隣への配慮</p>
+                    </li>
 
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#4facfe] text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-xs">
-                        3
-                      </div>
-                      <div className="flex-1">
-                        <h6 className="font-bold text-gray-800 text-sm inline-block min-w-[120px]">プロ仕様設備</h6>
-                        <p className="text-xs text-gray-600">全面ミラー（W720cm×H200cm）・Bluetoothスピーカー</p>
-                      </div>
-                    </div>
-                  </div>
+                    <li className="mobile-list-item">
+                      <strong className="mobile-high-contrast">プロ仕様設備</strong>
+                      <p className="text-xs text-gray-600 mt-1">全面ミラー（W720cm×H200cm）・Bluetoothスピーカー</p>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -196,13 +189,13 @@ export default function StudioInfo() {
             className="bg-[#f8f9fa] rounded-xl p-8 mb-12"
           >
             <h4 className="text-xl font-bold mb-6 text-center text-gray-800">利用用途</h4>
-            <p className="text-gray-700 text-center mb-4">
+            <p className="text-gray-700 text-center mb-4 mobile-text-spacing">
               ダンス・ヨガ・ピラティス・トレーニング・ライブ配信・ダンス動画撮影など様々な用途でご利用いただけます。
             </p>
-            <p className="text-gray-700 text-center">
+            <p className="text-gray-700 text-center mobile-text-spacing">
               <span className="inline-marker">定期利用をご利用いただくと</span>
               <span className="mobile-break"></span>
-              更にお得にご利用可能です。
+              <strong>更にお得にご利用可能です。</strong>
             </p>
           </motion.div>
 
@@ -214,19 +207,28 @@ export default function StudioInfo() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-xl shadow-md p-8 mb-12"
           >
-            <h4 className="text-lg font-bold mb-6 text-center text-gray-800">玉造ダンススタジオBeyondの特徴</h4>
-            <p className="text-gray-700 mb-4 text-center">
-              <span className="font-medium">玉造駅から徒歩2分</span>のアクセス抜群の立地に位置する当スタジオは、
-              <span className="font-medium">天王寺区で人気のレンタルスタジオ</span>です。
-              <span className="font-medium">当日予約可能なダンススタジオ</span>として、急な練習にも対応。
-              <span className="font-medium">格安ダンスレンタル</span>
-              料金で、長時間の利用もリーズナブルにご利用いただけます。
-            </p>
-            <p className="text-gray-700 text-center">
-              <span className="font-medium">初心者向けダンススタジオ</span>としての設備も充実しており、
-              初めての方でも安心して利用できる環境を整えています。
-              <span className="font-medium">玉造のダンス練習場</span>をお探しなら、 ぜひBeyondをご利用ください。
-            </p>
+            <h4 className="text-lg font-bold mb-6 text-center text-gray-800 mobile-heading">
+              玉造ダンススタジオBeyondの特徴
+            </h4>
+            <div className="emphasis-box">
+              <p className="text-gray-700 mb-4 text-center mobile-text-spacing">
+                <strong className="mobile-high-contrast">玉造駅から徒歩2分</strong>
+                のアクセス抜群の立地に位置する当スタジオは、
+                <strong className="mobile-high-contrast">天王寺区で人気のレンタルスタジオ</strong>です。
+                <span className="mobile-break"></span>
+                <strong className="mobile-high-contrast">当日予約可能なダンススタジオ</strong>として、急な練習にも対応。
+                <span className="mobile-break"></span>
+                <strong className="mobile-high-contrast">格安ダンスレンタル</strong>
+                料金で、長時間の利用もリーズナブルにご利用いただけます。
+              </p>
+              <p className="text-gray-700 text-center mobile-text-spacing">
+                <strong className="mobile-high-contrast">初心者向けダンススタジオ</strong>としての設備も充実しており、
+                初めての方でも安心して利用できる環境を整えています。
+                <span className="mobile-break"></span>
+                <strong className="mobile-high-contrast">玉造のダンス練習場</strong>をお探しなら、
+                ぜひBeyondをご利用ください。
+              </p>
+            </div>
           </motion.div>
 
           {/* 予約ボタン */}

@@ -285,11 +285,11 @@ export default function StudioFeatures() {
           </motion.div>
 
           {/* 予約ボタン */}
-          <div className="mt-12 text-center">
+          <div className="text-center">
             <p className="text-base font-medium mb-4">
-              ＼ スペースマーケットで簡単予約！
+              ／ スペースマーケットで簡単予約！
               <br className="sm:hidden" />
-              30秒でサクッと予約完了 ／
+              30秒でサクッと予約完了 ＼
             </p>
             <Link
               href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"

@@ -162,29 +162,6 @@ function StudioFloorPlan({ onHover }: { onHover: (feature: string | null) => voi
         </mesh>
       </group>
 
-      {/* 音響システム - 中央付近 */}
-      <group
-        position={[0, 0.3, 0]}
-        onPointerOver={() => {
-          setHovered("sound")
-          onHover("sound")
-        }}
-        onPointerOut={() => {
-          setHovered("")
-          onHover(null)
-        }}
-      >
-        <mesh receiveShadow castShadow>
-          <boxGeometry args={[1, 0.6, 0.5]} />
-          <meshStandardMaterial color={hovered === "sound" ? "#3b82f6" : "#334155"} />
-        </mesh>
-        {/* スピーカーのディテール */}
-        <mesh position={[0, 0.31, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-          <circleGeometry args={[0.2, 32]} />
-          <meshStandardMaterial color="#94a3b8" />
-        </mesh>
-      </group>
-
       {/* 更衣スペース - 右側 */}
       <group
         position={[3.5, 0.5, 0]}
@@ -264,11 +241,6 @@ export default function Studio3DShowcase() {
       title: "全面鏡張り",
       description:
         "壁一面に高品質なミラーを設置。自分の動きをあらゆる角度から確認できるため、技術向上に最適な環境です。",
-    },
-    sound: {
-      title: "高性能音響システム",
-      description:
-        "BOSE製スピーカーによる臨場感あふれる音響空間。繊細な音の表現から迫力の重低音まで、あらゆる音楽ジャンルに対応します。",
     },
     lighting: {
       title: "テレビ/モニター",

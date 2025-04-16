@@ -137,8 +137,9 @@ export default function StudioInfo() {
                   <h4 className="text-lg font-bold text-gray-800">対象者</h4>
                 </div>
                 <div className="text-gray-700 mb-6 pl-8">
-                  <span className="bg-gradient-to-r from-[#4facfe] to-[#00f2fe] bg-clip-text text-transparent font-bold block sm:inline-block mb-2 sm:mb-0">
-                    「玉造で始める、自由な表現の場」
+                  <span className="relative inline-block mb-2 sm:mb-0">
+                    <span className="relative z-10 font-bold text-[#4facfe]">「玉造で始める、自由な表現の場」</span>
+                    <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-[#4facfe]/20 to-[#00f2fe]/20 rounded-full"></span>
                   </span>
                   <br className="hidden sm:inline" />
                   <br className="hidden sm:inline" />

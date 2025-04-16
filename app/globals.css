@@ -369,3 +369,41 @@
     transform: translateY(0) translateX(0);
   }
 }
+
+/* 改善したマーカースタイル */
+.highlight-marker {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.highlight-marker::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, rgba(79, 172, 254, 0.2), rgba(0, 242, 254, 0.2));
+  z-index: -1;
+}
+
+/* モバイル向けマーカー調整 */
+@media (max-width: 640px) {
+  .highlight-marker {
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+
+  .highlight-marker::after {
+    height: 5px;
+    bottom: 0;
+  }
+}
+
+/* 既存のマーカーハイライト調整 */
+.marker-highlight::after {
+  border-radius: 3px;
+  background: linear-gradient(to right, rgba(79, 172, 254, 0.2), rgba(0, 242, 254, 0.2));
+}

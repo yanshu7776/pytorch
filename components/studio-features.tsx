@@ -140,9 +140,9 @@ export default function StudioFeatures() {
                       </p>
                       <p className="text-gray-700">
                         ダンス練習はもちろん、ライブ前のリハーサルや動画撮影にも
-                        <span className="relative inline-block">
+                        <span className="relative inline-block mx-1">
                           <span className="relative z-10 font-bold">最適な環境</span>
-                          <span className="absolute bottom-0 left-0 w-full h-[8px] bg-yellow-200/60 z-[-1]"></span>
+                          <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-[#4facfe]/20 to-[#00f2fe]/20 rounded-full"></span>
                         </span>
                         を整えています。
                       </p>

@@ -287,9 +287,12 @@ export default function StudioFeatures() {
           {/* 予約ボタン */}
           <div className="text-center">
             <p className="text-base font-medium mb-4">
-              ／ スペースマーケットで簡単予約！
-              <br className="sm:hidden" />
-              30秒でサクッと予約完了 ＼
+              <span className="sm:hidden">
+                ＼スペースマーケットで簡単予約！／
+                <br />
+                30秒でサクッと予約完了
+              </span>
+              <span className="hidden sm:inline">＼スペースマーケットで簡単予約！30秒でサクッと予約完了／</span>
             </p>
             <Link
               href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"

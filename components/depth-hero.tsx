@@ -6,8 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
-// FormattedTextコンポーネントをインポート
-import FormattedText from "@/components/formatted-text"
 
 export default function DepthHero() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -119,8 +117,8 @@ export default function DepthHero() {
 
       {/* コンテンツオーバーレイ - 下部に配置 */}
       <div className="relative z-10 h-full flex flex-col justify-end items-start">
-        <div className="container mx-auto px-6 pb-16 md:pb-20">
-          <div className="max-w-xs sm:max-w-sm md:max-w-md md:ml-12 lg:ml-24">
+        <div className="container mx-auto px-4 sm:px-6 pb-12 md:pb-16">
+          <div className="max-w-md sm:max-w-lg md:max-w-xl md:ml-8 lg:ml-16">
             {/* スライドコンテンツ */}
             <AnimatePresence mode="wait">
               {slides.map(
@@ -140,7 +138,7 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2, duration: 0.6 }}
-                          className="font-serif text-xs tracking-widest text-blue-200 uppercase mb-1"
+                          className="font-serif text-xs tracking-widest text-blue-200 uppercase mb-1 whitespace-nowrap overflow-hidden text-ellipsis"
                         >
                           {slide.subtitle}
                         </motion.p>
@@ -150,7 +148,7 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.4, duration: 0.8 }}
-                          className="text-2xl sm:text-3xl font-bold text-white mb-1"
+                          className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 whitespace-nowrap overflow-hidden text-ellipsis"
                           style={{
                             textShadow: "0 2px 10px rgba(0,0,0,0.5)",
                           }}
@@ -163,9 +161,9 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6, duration: 0.8 }}
-                          className="text-base sm:text-lg leading-loose text-white/90 mb-2 max-w-2xl mx-auto"
+                          className="text-base sm:text-lg text-white/90 mb-2 whitespace-nowrap overflow-hidden text-ellipsis"
                         >
-                          <FormattedText text={slide.description} />
+                          {slide.description}
                         </motion.div>
 
                         {/* CTAボタン */}

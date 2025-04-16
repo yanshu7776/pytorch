@@ -134,6 +134,18 @@
     br.mobile-only {
       display: inline;
     }
+
+    /* 改行を強制する要素 */
+    .force-break {
+      display: block;
+      width: 100%;
+    }
+
+    /* 改行を防止する要素 */
+    .prevent-break {
+      white-space: nowrap;
+      display: inline-block;
+    }
   }
 
   /* 強調テキスト - ハイライトマーカー改善 */
@@ -284,6 +296,23 @@
     word-break: break-word;
     overflow-wrap: break-word;
   }
+}
+
+/* 改行を制御するためのユーティリティクラス */
+.text-break-all {
+  word-break: break-all;
+}
+
+.text-break-word {
+  word-break: break-word;
+}
+
+.text-pre-line {
+  white-space: pre-line;
+}
+
+.text-pre-wrap {
+  white-space: pre-wrap;
 }
 
 /* Utility classes */

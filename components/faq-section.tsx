@@ -4,6 +4,8 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
+// FormattedTextコンポーネントをインポート
+import FormattedText from "@/components/formatted-text"
 
 export default function FaqSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
@@ -169,7 +171,13 @@ export default function FaqSection() {
                       <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-blue-200 rounded-sm bg-blue-50">
                         <span className="text-lg font-bold text-[#005BAC]">A</span>
                       </div>
-                      <div className="ml-3 flex-grow text-base leading-loose space-y-6">{faq.answer}</div>
+                      <div className="ml-3 flex-grow text-base leading-loose space-y-6">
+                        {typeof faq.answer === "string" ? (
+                          <FormattedText text={faq.answer} className="text-sm text-left" />
+                        ) : (
+                          faq.answer
+                        )}
+                      </div>
                     </div>
                   </motion.div>
                 </div>

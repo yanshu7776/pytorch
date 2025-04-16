@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MapPin, Clock, Train, ExternalLink } from "lucide-react"
 import { motion, useInView } from "framer-motion"
+import FormattedText from "@/components/formatted-text"
 
 export default function LocationSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -27,11 +28,10 @@ export default function LocationSection() {
               <div className="h-px bg-[#4facfe] w-16"></div>
             </div>
 
-            <p className="text-base sm:text-lg leading-loose max-w-2xl mx-auto">
-              大阪メトロ玉造駅から徒歩2分、天王寺区の便利なロケーションに位置する当スタジオは、
-              <span className="highlight block sm:inline-block mt-1 sm:mt-0">アクセス抜群の立地</span>
-              で、忙しい方でも気軽に通えます。
-            </p>
+            <FormattedText
+              text="大阪メトロ玉造駅から徒歩2分、天王寺区の便利なロケーションに位置する当スタジオは、アクセス抜群の立地で、忙しい方でも気軽に通えます。"
+              className="text-base sm:text-lg leading-loose max-w-2xl mx-auto"
+            />
           </motion.div>
 
           {/* 地図と情報 - 中央揃えのカード */}
@@ -66,14 +66,10 @@ export default function LocationSection() {
 
                 <h3 className="text-xl font-bold text-center mb-6 text-gray-800">玉造駅徒歩2分の好立地！</h3>
 
-                <p className="text-center text-gray-700 mb-6">
-                  大阪市天王寺区玉造元町６−５にある当スタジオは、
-                  <span className="font-bold relative">
-                    <span className="relative z-10">玉造駅（大阪環状線）北口から徒歩2分</span>
-                    <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20 z-[-1]"></span>
-                  </span>
-                  の至便なロケーション。商店街に隣接し、セブンイレブンまで徒歩2分と利便性抜群です。
-                </p>
+                <FormattedText
+                  text="大阪市天王寺区玉造元町６−５にある当スタジオは、玉造駅（大阪環状線）北口から徒歩2分の至便なロケーション。商店街に隣接し、セブンイレブンまで徒歩2分と利便性抜群です。"
+                  className="text-center text-gray-700 mb-6"
+                />
 
                 <div className="grid md:grid-cols-2 gap-8 mt-10">
                   <div className="text-center">
@@ -186,8 +182,6 @@ export default function LocationSection() {
           </motion.div>
         </div>
       </div>
-
-      {/* 下部の装飾 */}
       <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#4facfe] to-[#00f2fe]"></div>
     </section>
   )

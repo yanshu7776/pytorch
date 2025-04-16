@@ -6,6 +6,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
+// FormattedTextコンポーネントをインポート
+import FormattedText from "@/components/formatted-text"
 
 export default function DepthHero() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -157,14 +159,14 @@ export default function DepthHero() {
                         </motion.h1>
 
                         {/* 説明文 - タイトルの下に配置 */}
-                        <motion.p
+                        <motion.div
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6, duration: 0.8 }}
                           className="text-base sm:text-lg leading-loose text-white/90 mb-2 max-w-2xl mx-auto"
                         >
-                          {slide.description}
-                        </motion.p>
+                          <FormattedText text={slide.description} />
+                        </motion.div>
 
                         {/* CTAボタン */}
                         <motion.div

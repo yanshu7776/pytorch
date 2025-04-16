@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Check } from "lucide-react"
+import FormattedText from "@/components/formatted-text"
 
 export default function StudioFeatures() {
   return (
@@ -24,9 +25,10 @@ export default function StudioFeatures() {
               <h2 className="text-2xl sm:text-3xl font-bold mx-4">当スタジオが選ばれる理由</h2>
               <div className="h-px bg-[#4facfe] w-16"></div>
             </div>
-            <p className="text-base sm:text-lg leading-loose max-w-2xl mx-auto">
-              プロ仕様の設備を完備した、ダンス練習に最適な環境をご提供します
-            </p>
+            <FormattedText
+              text="プロ仕様の設備を完備した、ダンス練習に最適な環境をご提供します。"
+              className="text-base sm:text-lg leading-loose max-w-2xl mx-auto"
+            />
           </motion.div>
 
           {/* 3カラムの特徴紹介 */}
@@ -44,13 +46,10 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">清潔できれい</h3>
-                <p className="text-gray-700 text-center mb-4">
-                  最新のリフォームで生まれ変わった、
-                  <span className="block sm:inline">清潔感あふれるスタジオです。</span>
-                </p>
-                <p className="text-gray-700 text-center">
-                  スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。
-                </p>
+                <FormattedText
+                  text="最新のリフォームで生まれ変わった、清潔感あふれるスタジオです。スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。"
+                  className="text-gray-700 text-center"
+                />
               </div>
             </motion.div>
 
@@ -67,14 +66,10 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">充実した設備</h3>
-                <p className="text-gray-700 text-center mb-4">
-                  <span className="block sm:inline">3.6mの大型鏡に、</span>
-                  <span className="block sm:inline">気分を盛り上げるLEDライト完備</span>
-                </p>
-                <p className="text-gray-700 text-center">
-                  ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。
-                </p>
-                <p className="text-gray-700 text-center mt-4">更衣室・トイレもあり快適にご利用頂けます。</p>
+                <FormattedText
+                  text="3.6mの大型鏡に、気分を盛り上げるLEDライト完備。ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。更衣室・トイレもあり快適にご利用頂けます。"
+                  className="text-gray-700 text-center"
+                />
               </div>
             </motion.div>
 
@@ -91,16 +86,14 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">リーズナブル</h3>
-                <p className="text-gray-700 text-center mb-4">
-                  245円〜/30分というお手頃価格から、高品質なスタジオを利用できます。
-                </p>
-                <p className="text-gray-700 text-center">
+                <div className="text-gray-700 text-center">
+                  <p>245円〜/30分というお手頃価格から、高品質なスタジオを利用できます。</p>
                   <span className="relative inline-block">
                     <span className="relative z-10">定期利用をご利用いただくと</span>
                     <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
                   </span>
                   <span className="block mt-1">更にお得にご利用可能です。</span>
-                </p>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -132,10 +125,10 @@ export default function StudioFeatures() {
 
                   <div>
                     <h3 className="text-xl font-bold mb-6 text-gray-800">充実の設備</h3>
-                    <p className="text-gray-700 mb-6">
-                      天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです。
-                      35㎡の広々とした空間で、グループレッスンやチーム練習に最適。24時間いつでも利用可能で当日予約もOKです。
-                    </p>
+                    <FormattedText
+                      text="天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです。35㎡の広々とした空間で、グループレッスンやチーム練習に最適。24時間いつでも利用可能で当日予約もOKです。"
+                      className="text-gray-700 mb-6"
+                    />
                     <div className="bg-blue-50 rounded-xl px-4 sm:px-6 py-4 mb-6 border-l-4 border-[#4facfe]">
                       <p className="text-gray-700 mb-2">
                         <span className="font-bold text-blue-800 block sm:inline">初心者向けの広いミラー</span>

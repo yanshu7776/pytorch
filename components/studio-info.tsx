@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Clock, MapPin, Users, CreditCard } from "lucide-react"
+import FormattedText from "@/components/formatted-text"
 
 export default function StudioInfo() {
   return (
@@ -22,11 +23,10 @@ export default function StudioInfo() {
               ダンスやヨガに最適なレンタルスペース
             </p>
 
-            <p className="text-gray-700 mb-6">
-              天王寺区で最も便利なレンタルスタジオ。
-              <span className="highlight">玉造駅から徒歩2分の好立地</span>
-              で、当日予約も可能なダンス練習場です。
-            </p>
+            <FormattedText
+              text="天王寺区で最も便利なレンタルスタジオ。玉造駅から徒歩2分の好立地で、当日予約も可能なダンス練習場です。"
+              className="text-gray-700 mb-6"
+            />
           </motion.div>
 
           {/* 基本情報カード */}
@@ -136,19 +136,14 @@ export default function StudioInfo() {
                   <Users className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">対象者</h4>
                 </div>
-                <p className="text-gray-700 mb-6 pl-8">
+                <div className="text-gray-700 mb-6 pl-8">
                   <span className="bg-gradient-to-r from-[#4facfe] to-[#00f2fe] bg-clip-text text-transparent font-bold block sm:inline-block mb-2 sm:mb-0">
                     「玉造で始める、自由な表現の場」
                   </span>
                   <br className="hidden sm:inline" />
                   <br className="hidden sm:inline" />
-                  玉造ダンススタジオBeyondは、
-                  <span className="font-bold">初心者からプロまで対応</span>
-                  する多目的レンタルスペース。
-                  <span className="block mt-2">
-                    ダンス・ヨガ・動画撮影など、クリエイティブな活動を支える環境を提供します。
-                  </span>
-                </p>
+                  <FormattedText text="玉造ダンススタジオBeyondは、初心者からプロまで対応する多目的レンタルスペース。ダンス・ヨガ・動画撮影など、クリエイティブな活動を支える環境を提供します。" />
+                </div>
 
                 <div className="bg-[#f8f9fa] p-5 rounded-lg mb-6">
                   <h5 className="font-bold text-[#4facfe] mb-4 text-center">3つの特徴</h5>
@@ -217,26 +212,14 @@ export default function StudioInfo() {
             className="bg-white rounded-xl shadow-md p-8 mb-12"
           >
             <h4 className="text-lg font-bold mb-6 text-center text-gray-800">玉造ダンススタジオBeyondの特徴</h4>
-            <p className="text-gray-700 mb-4 text-center">
-              <span className="font-medium block sm:inline">玉造駅から徒歩2分</span>
-              のアクセス抜群の立地に位置する当スタジオは、
-              <span className="font-medium block sm:inline mt-1 sm:mt-0">天王寺区で人気のレンタルスタジオ</span>です。
-              <span className="block sm:inline mt-1 sm:mt-0">
-                <span className="font-medium">当日予約可能なダンススタジオ</span>
-                として、急な練習にも対応。
-              </span>
-              <span className="block sm:inline mt-1 sm:mt-0">
-                <span className="font-medium">格安ダンスレンタル</span>
-                料金で、長時間の利用もリーズナブルにご利用いただけます。
-              </span>
-            </p>
-            <p className="text-gray-700 text-center">
-              <span className="font-medium block sm:inline">初心者向けダンススタジオ</span>としての設備も充実しており、
-              <span className="block sm:inline mt-1 sm:mt-0">初めての方でも安心して利用できる環境を整えています。</span>
-              <span className="block sm:inline mt-1 sm:mt-0">
-                <span className="font-medium">玉造のダンス練習場</span>をお探しなら、 ぜひBeyondをご利用ください。
-              </span>
-            </p>
+            <FormattedText
+              text="玉造駅から徒歩2分のアクセス抜群の立地に位置する当スタジオは、天王寺区で人気のレンタルスタジオです。当日予約可能なダンススタジオとして、急な練習にも対応。格安ダンスレンタル料金で、長時間の利用もリーズナブルにご利用いただけます。"
+              className="text-gray-700 mb-4 text-center"
+            />
+            <FormattedText
+              text="初心者向けダンススタジオとしての設備も充実しており、初めての方でも安心して利用できる環境を整えています。玉造のダンス練習場をお探しなら、ぜひBeyondをご利用ください。"
+              className="text-gray-700 text-center"
+            />
           </motion.div>
 
           {/* 予約ボタン */}

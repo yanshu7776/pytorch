@@ -87,12 +87,11 @@ export default function StudioFeatures() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">リーズナブル</h3>
                 <div className="text-gray-700 text-center">
-                  <p>245円〜/30分というお手頃価格から、高品質なスタジオを利用できます。</p>
-                  <span className="relative inline-block">
-                    <span className="relative z-10">定期利用をご利用いただくと</span>
-                    <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
-                  </span>
-                  <span className="block mt-1">更にお得にご利用可能です。</span>
+                  <p>平日1時間¥1,000〜、土日祝¥1,500〜というお手頃価格で、</p>
+                  <p className="mt-2">高品質なスタジオを利用できます。</p>
+                  <p className="mt-2">5人以上のグループ利用なら</p>
+                  <p className="font-bold text-[#4facfe] mt-2">1人あたり¥200〜</p>
+                  <p className="mt-2">さらにお得にご利用可能です。</p>
                 </div>
               </div>
             </motion.div>

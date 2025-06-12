@@ -175,20 +175,20 @@ An example of environment setup is shown below:
 
 * Linux:
 
-```bash
+\`\`\`bash
 $ source <CONDA_INSTALL_DIR>/bin/activate
 $ conda create -y -n <CONDA_NAME>
 $ conda activate <CONDA_NAME>
-```
+\`\`\`
 
 * Windows:
 
-```bash
+\`\`\`bash
 $ source <CONDA_INSTALL_DIR>\Scripts\activate.bat
 $ conda create -y -n <CONDA_NAME>
 $ conda activate <CONDA_NAME>
 $ call "C:\Program Files\Microsoft Visual Studio\<VERSION>\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
-```
+\`\`\`
 
 ##### NVIDIA CUDA Support
 If you want to compile with CUDA support, [select a supported version of CUDA from our support matrix](https://pytorch.org/get-started/locally/), then install the following:
@@ -222,27 +222,27 @@ If you want to disable Intel GPU support, export the environment variable `USE_X
 Other potentially useful environment variables may be found in `setup.py`.
 
 #### Get the PyTorch Source
-```bash
+\`\`\`bash
 git clone --recursive https://github.com/pytorch/pytorch
 cd pytorch
 # if you are updating an existing checkout
 git submodule sync
 git submodule update --init --recursive
-```
+\`\`\`
 
 #### Install Dependencies
 
 **Common**
 
-```bash
+\`\`\`bash
 conda install cmake ninja
 # Run this command from the PyTorch directory after cloning the source code using the “Get the PyTorch Source“ section below
 pip install -r requirements.txt
-```
+\`\`\`
 
 **On Linux**
 
-```bash
+\`\`\`bash
 pip install mkl-static mkl-include
 # CUDA only: Add LAPACK support for the GPU if needed
 conda install -c pytorch magma-cuda121  # or the magma-cuda* that matches your CUDA version from https://anaconda.org/pytorch/repo
@@ -251,46 +251,46 @@ conda install -c pytorch magma-cuda121  # or the magma-cuda* that matches your C
 # Run from the pytorch directory after cloning
 # For Intel GPU support, please explicitly `export USE_XPU=1` before running command.
 make triton
-```
+\`\`\`
 
 **On MacOS**
 
-```bash
+\`\`\`bash
 # Add this package on intel x86 processor machines only
 pip install mkl-static mkl-include
 # Add these packages if torch.distributed is needed
 conda install pkg-config libuv
-```
+\`\`\`
 
 **On Windows**
 
-```bash
+\`\`\`bash
 pip install mkl-static mkl-include
 # Add these packages if torch.distributed is needed.
 # Distributed package support on Windows is a prototype feature and is subject to changes.
 conda install -c conda-forge libuv=1.39
-```
+\`\`\`
 
 #### Install PyTorch
 **On Linux**
 
 If you're compiling for AMD ROCm then first run this command:
-```bash
+\`\`\`bash
 # Only run this if you're compiling for ROCm
 python tools/amd_build/build_amd.py
-```
+\`\`\`
 
 Install PyTorch
-```bash
+\`\`\`bash
 export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
 python setup.py develop
-```
+\`\`\`
 
 **On macOS**
 
-```bash
+\`\`\`bash
 python3 setup.py develop
-```
+\`\`\`
 
 **On Windows**
 
@@ -300,9 +300,9 @@ If you want to build legacy python code, please refer to [Building on legacy cod
 
 In this mode PyTorch computations will run on your CPU, not your GPU.
 
-```cmd
+\`\`\`cmd
 python setup.py develop
-```
+\`\`\`
 
 Note on OpenMP: The desired OpenMP implementation is Intel OpenMP (iomp). In order to link against iomp, you'll need to manually download the library and set up the building environment by tweaking `CMAKE_INCLUDE_PATH` and `LIB`. The instruction [here](https://github.com/pytorch/pytorch/blob/main/docs/source/notes/windows.rst#building-from-source) is an example for setting up both MKL and Intel OpenMP. Without these configurations for CMake, Microsoft Visual C OpenMP runtime (vcomp) will be used.
 
@@ -323,7 +323,7 @@ Additional libraries such as
 You can refer to the [build_pytorch.bat](https://github.com/pytorch/pytorch/blob/main/.ci/pytorch/win-test-helpers/build_pytorch.bat) script for some other environment variables configurations
 
 
-```cmd
+\`\`\`cmd
 cmd
 
 :: Set the environment variables after you have downloaded and unzipped the mkl package,
@@ -344,7 +344,7 @@ set CUDAHOSTCXX=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC
 
 python setup.py develop
 
-```
+\`\`\`
 
 **Intel GPU builds**
 
@@ -354,9 +354,9 @@ Please make sure [the common prerequisites](#prerequisites) as well as [the prer
 
 Then PyTorch can be built with the command:
 
-```cmd
+\`\`\`cmd
 python setup.py develop
-```
+\`\`\`
 
 ##### Adjust Build Options (Optional)
 
@@ -365,18 +365,18 @@ the following. For example, adjusting the pre-detected directories for CuDNN or 
 with such a step.
 
 On Linux
-```bash
+\`\`\`bash
 export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
 python setup.py build --cmake-only
 ccmake build  # or cmake-gui build
-```
+\`\`\`
 
 On macOS
-```bash
+\`\`\`bash
 export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
 MACOSX_DEPLOYMENT_TARGET=10.9 CC=clang CXX=clang++ python setup.py build --cmake-only
 ccmake build  # or cmake-gui build
-```
+\`\`\`
 
 ### Docker Image
 
@@ -384,9 +384,9 @@ ccmake build  # or cmake-gui build
 
 You can also pull a pre-built docker image from Docker Hub and run with docker v19.03+
 
-```bash
+\`\`\`bash
 docker run --gpus all --rm -ti --ipc=host pytorch/pytorch:latest
-```
+\`\`\`
 
 Please note that PyTorch uses shared memory to share data between processes, so if torch multiprocessing is used (e.g.
 for multithreaded data loaders) the default shared memory segment size that container runs with is not enough, and you
@@ -400,29 +400,29 @@ The `Dockerfile` is supplied to build images with CUDA 11.1 support and cuDNN v8
 You can pass `PYTHON_VERSION=x.y` make variable to specify which Python version is to be used by Miniconda, or leave it
 unset to use the default.
 
-```bash
+\`\`\`bash
 make -f docker.Makefile
 # images are tagged as docker.io/${your_docker_username}/pytorch
-```
+\`\`\`
 
 You can also pass the `CMAKE_VARS="..."` environment variable to specify additional CMake variables to be passed to CMake during the build.
 See [setup.py](./setup.py) for the list of available variables.
 
-```bash
+\`\`\`bash
 make -f docker.Makefile
-```
+\`\`\`
 
 ### Building the Documentation
 
 To build documentation in various formats, you will need [Sphinx](http://www.sphinx-doc.org) and the
 readthedocs theme.
 
-```bash
+\`\`\`bash
 cd docs/
 pip install -r requirements.txt
 make html
 make serve
-```
+\`\`\`
 
 Run `make` to get a list of all available output formats.
 
@@ -434,7 +434,7 @@ If you get a katex error run `npm install katex`.  If it persists, try
 compatible with your version of `nodejs` and doc builds will fail.
 A combination of versions that is known to work is `node@6.13.1` and
 `katex@0.13.18`. To install the latter with `npm` you can run
-```npm install -g katex@0.13.18```
+\`\`\`npm install -g katex@0.13.18```
 
 ### Previous Versions
 

@@ -8,7 +8,7 @@ export default function StudioInfo() {
   return (
     <section id="info" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="content-center">
           {/* タイトルとサブタイトル */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -17,17 +17,12 @@ export default function StudioInfo() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">玉造ダンススタジオBeyond</h2>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">玉造ダンススタジオBeyond</h1>
             <p className="text-xl text-gray-700 mb-6">ダンスやヨガに最適なレンタルスペース</p>
 
-            <p className="text-gray-700 mb-6">
-              天王寺区で最も便利なレンタルスタジオ。
-              <span className="relative inline-block">
-                <span className="relative z-10">玉造駅から徒歩2分の好立地</span>
-                <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
-              </span>
-              で、当日予約も可能なダンス練習場です。
-            </p>
+            <div className="quote">
+              「天王寺区で最も便利なレンタルスタジオ。玉造駅から徒歩2分の好立地で、当日予約も可能なダンス練習場です！」
+            </div>
           </motion.div>
 
           {/* 基本情報カード */}
@@ -44,8 +39,8 @@ export default function StudioInfo() {
                   <Clock className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">24時間営業</h3>
-              <p className="text-gray-600">当日予約可能なダンススタジオ</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">24時間営業</h3>
+              <p className="text-gray-600 text-center">当日予約可能なダンススタジオ</p>
             </motion.div>
 
             <motion.div
@@ -60,8 +55,8 @@ export default function StudioInfo() {
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">駅近アクセス</h3>
-              <p className="text-gray-600">玉造駅から徒歩2分の好立地</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">駅近アクセス</h3>
+              <p className="text-gray-600 text-center">玉造駅から徒歩2分の好立地</p>
             </motion.div>
 
             <motion.div
@@ -76,8 +71,8 @@ export default function StudioInfo() {
                   <CreditCard className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">格安料金</h3>
-              <p className="text-gray-600">大阪で格安のダンスレンタル</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">格安料金</h3>
+              <p className="text-gray-600 text-center">大阪で格安のダンスレンタル</p>
             </motion.div>
           </div>
 
@@ -91,7 +86,7 @@ export default function StudioInfo() {
           >
             <div className="flex items-center justify-center mb-8">
               <div className="h-px bg-[#4facfe] w-16"></div>
-              <h3 className="text-2xl font-bold mx-4 text-gray-800">スタジオ詳細</h3>
+              <h2 className="text-2xl font-bold mx-4 text-gray-800">スタジオ詳細</h2>
               <div className="h-px bg-[#4facfe] w-16"></div>
             </div>
 
@@ -137,12 +132,8 @@ export default function StudioInfo() {
                   <Users className="w-5 h-5 text-[#4facfe] mr-3" />
                   <h4 className="text-lg font-bold text-gray-800">対象者</h4>
                 </div>
+                <div className="quote">「玉造で始める、自由な表現の場」</div>
                 <p className="text-gray-700 mb-6 pl-8">
-                  <span className="bg-gradient-to-r from-[#4facfe] to-[#00f2fe] bg-clip-text text-transparent font-bold">
-                    「玉造で始める、自由な表現の場」
-                  </span>
-                  <br />
-                  <br />
                   玉造ダンススタジオBeyondは、
                   <span className="font-bold">初心者からプロまで対応</span>
                   する多目的レンタルスペース。
@@ -199,12 +190,7 @@ export default function StudioInfo() {
             <p className="text-gray-700 text-center mb-4">
               ダンス・ヨガ・ピラティス・トレーニング・ライブ配信・ダンス動画撮影など様々な用途でご利用いただけます。
             </p>
-            <p className="text-gray-700 text-center">
-              <span className="relative inline-block">
-                <span className="relative z-10">天王寺区で最も多目的に使えるレンタルスタジオです。</span>
-                <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
-              </span>
-            </p>
+            <div className="quote">「定期利用をご利用いただくと更にお得にご利用可能です！」</div>
           </motion.div>
 
           {/* SEOキーワードを含むテキストブロック */}

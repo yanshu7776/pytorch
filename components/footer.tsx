@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="relative h-14 w-40 mb-4 bg-white rounded-md p-1">
               <Image src="/images/logo-new.jpeg" alt="Beyond Dance Studio Logo" fill className="object-contain" />
             </div>
-            <p className="text-base leading-loose text-white/80 mb-3">
+            <p className="text-sm text-white/80 mb-3">
               〒543-0071
               <br />
               大阪府大阪市天王寺区玉造元町６−５
@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-2xl font-bold mb-4 border-b border-white/20 pb-2">営業時間</h4>
+            <h4 className="text-lg font-semibold mb-4 border-b border-white/20 pb-2">営業時間</h4>
             <p className="text-sm text-white/80">
               24時間営業
               <br />

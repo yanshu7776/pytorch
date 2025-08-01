@@ -4,8 +4,6 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-// FormattedTextコンポーネントをインポート
-import FormattedText from "@/components/formatted-text"
 
 export default function FaqSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
@@ -25,11 +23,11 @@ export default function FaqSection() {
         <div>
           <p className="text-sm text-left">はい、可能です。詳細は下記ページの「予約について」をご覧ください。</p>
           <div className="bg-gray-50 p-3 rounded-md mt-3 border border-gray-100">
-            <div className="flex flex-col sm:flex-row sm:items-start">
-              <div className="relative w-full sm:w-24 h-40 sm:h-20 flex-shrink-0 overflow-hidden rounded-md mb-3 sm:mb-0">
+            <div className="flex items-start">
+              <div className="relative w-24 h-20 flex-shrink-0 overflow-hidden rounded-md">
                 <Image src="/images/studio-1.jpeg" alt="予約フォーム" fill className="object-cover" />
               </div>
-              <div className="sm:ml-3">
+              <div className="ml-3">
                 <h4 className="font-medium text-gray-900 mb-1 text-sm">ご予約フォーム | レンタルスタジオ Beyond</h4>
                 <p className="text-xs text-gray-600 text-left">
                   ご希望の時間帯が空いていましたら、すぐにご予約、利用可能です。下のご予約フォームにてご予約下さい。ポータルサイト経由でもご予約は可能ですが、本サイトからのご予約...
@@ -153,7 +151,7 @@ export default function FaqSection() {
                       <span className="text-lg font-bold text-[#005BAC]">Q</span>
                     </div>
                     <div className="ml-3 flex-grow">
-                      <h3 className="text-base sm:text-lg font-bold text-gray-900 pt-2">{faq.question}</h3>
+                      <h3 className="text-base font-medium text-gray-900 pt-2">{faq.question}</h3>
                     </div>
                   </div>
 
@@ -171,13 +169,7 @@ export default function FaqSection() {
                       <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-blue-200 rounded-sm bg-blue-50">
                         <span className="text-lg font-bold text-[#005BAC]">A</span>
                       </div>
-                      <div className="ml-3 flex-grow text-base leading-loose space-y-6">
-                        {typeof faq.answer === "string" ? (
-                          <FormattedText text={faq.answer} className="text-sm text-left" />
-                        ) : (
-                          faq.answer
-                        )}
-                      </div>
+                      <div className="ml-3 flex-grow text-gray-700">{faq.answer}</div>
                     </div>
                   </motion.div>
                 </div>
@@ -188,9 +180,7 @@ export default function FaqSection() {
           {/* 追加情報 */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600">
-              その他ご不明な点がございましたら、
-              <br className="sm:hidden" />
-              お気軽に
+              その他ご不明な点がございましたら、お気軽に
               <Link href="#contact" className="text-[#005BAC] hover:underline mx-1">
                 お問い合わせ
               </Link>

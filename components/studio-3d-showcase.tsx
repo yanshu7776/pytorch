@@ -162,6 +162,29 @@ function StudioFloorPlan({ onHover }: { onHover: (feature: string | null) => voi
         </mesh>
       </group>
 
+      {/* 音響システム - 中央付近 */}
+      <group
+        position={[0, 0.3, 0]}
+        onPointerOver={() => {
+          setHovered("sound")
+          onHover("sound")
+        }}
+        onPointerOut={() => {
+          setHovered("")
+          onHover(null)
+        }}
+      >
+        <mesh receiveShadow castShadow>
+          <boxGeometry args={[1, 0.6, 0.5]} />
+          <meshStandardMaterial color={hovered === "sound" ? "#3b82f6" : "#334155"} />
+        </mesh>
+        {/* スピーカーのディテール */}
+        <mesh position={[0, 0.31, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+          <circleGeometry args={[0.2, 32]} />
+          <meshStandardMaterial color="#94a3b8" />
+        </mesh>
+      </group>
+
       {/* 更衣スペース - 右側 */}
       <group
         position={[3.5, 0.5, 0]}
@@ -242,6 +265,11 @@ export default function Studio3DShowcase() {
       description:
         "壁一面に高品質なミラーを設置。自分の動きをあらゆる角度から確認できるため、技術向上に最適な環境です。",
     },
+    sound: {
+      title: "高性能音響システム",
+      description:
+        "BOSE製スピーカーによる臨場感あふれる音響空間。繊細な音の表現から迫力の重低音まで、あらゆる音楽ジャンルに対応します。",
+    },
     lighting: {
       title: "テレビ/モニター",
       description: "ダンス動画の視聴や振り付けの確認に便利なテレビモニター。レッスンの参考映像を見ながら練習できます。",
@@ -268,10 +296,10 @@ export default function Studio3DShowcase() {
         >
           <div className="flex items-center justify-center mb-4">
             <div className="h-px bg-[#4facfe] w-16"></div>
-            <h2 className="text-2xl sm:text-3xl font-bold mx-4 text-white">スタジオ3D体験</h2>
+            <h2 className="text-3xl font-bold mx-4 text-white">スタジオ3D体験</h2>
             <div className="h-px bg-[#4facfe] w-16"></div>
           </div>
-          <p className="text-base sm:text-lg leading-loose text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             インタラクティブな3Dモデルで、スタジオの設備をご覧ください。 要素にカーソルを合わせると詳細が表示されます。
           </p>
         </motion.div>
@@ -334,7 +362,7 @@ export default function Studio3DShowcase() {
                 ))}
               </ul>
 
-              <div className="mt-6 bg-blue-50 rounded-xl px-6 py-4 border border-blue-800/50">
+              <div className="mt-6 p-3 bg-blue-900/30 rounded-lg border border-blue-800/50">
                 <h4 className="font-medium text-blue-300 flex items-center mb-2">
                   <ZoomIn className="mr-2 h-4 w-4" />
                   操作ガイド

@@ -120,16 +120,16 @@ export default function Home() {
                 <span className="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full mb-4">
                   簡単3ステップ
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">スペースマーケットで予約する</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">スペースマーケットで予約する</h2>
                 <div className="w-24 h-1 bg-white/50 mx-auto mb-6"></div>
-                <p className="text-base sm:text-lg leading-loose text-white/90 max-w-2xl mx-auto">
+                <p className="text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
                   玉造ダンススタジオBeyondは、スペースマーケットでの予約に対応しています。
                   24時間いつでも簡単に予約可能で、当日予約もOK！
                 </p>
               </div>
 
               {/* 予約ステップ */}
-              <div className="grid md:grid-cols-3 gap-6 mb-12 space-y-6 md:space-y-0">
+              <div className="grid md:grid-cols-3 gap-6 mb-12">
                 {[
                   {
                     icon: <Calendar className="w-8 h-8" />,
@@ -237,9 +237,7 @@ export default function Home() {
               {/* 追加情報 */}
               <div className="mt-12 text-center">
                 <p className="text-white/80 text-sm">
-                  ご不明な点がございましたら、
-                  <br className="sm:hidden" />
-                  お気軽にお問い合わせください。
+                  ご不明な点がございましたら、お気軽にお問い合わせください。
                   <br />
                   <a
                     href="mailto:info@beyond-dance.jp"

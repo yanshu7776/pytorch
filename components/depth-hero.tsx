@@ -28,7 +28,7 @@ export default function DepthHero() {
     },
     {
       image: "/images/studio-5.jpeg",
-      title: "初心者から上級者まで\n利用できる空間", // 改行を追加
+      title: "初心者から上級者まで利用できる空間",
       subtitle: "FOR EVERYONE",
       description: "プロ仕様の環境で、あなたのダンスの可能性を広げる。",
     },
@@ -117,8 +117,8 @@ export default function DepthHero() {
 
       {/* コンテンツオーバーレイ - 下部に配置 */}
       <div className="relative z-10 h-full flex flex-col justify-end items-start">
-        <div className="container mx-auto px-4 sm:px-6 pb-12 md:pb-16">
-          <div className="max-w-md sm:max-w-lg md:max-w-xl md:ml-8 lg:ml-16">
+        <div className="container mx-auto px-6 pb-16 md:pb-20">
+          <div className="max-w-xs sm:max-w-sm md:max-w-md md:ml-12 lg:ml-24">
             {/* スライドコンテンツ */}
             <AnimatePresence mode="wait">
               {slides.map(
@@ -138,7 +138,7 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2, duration: 0.6 }}
-                          className="font-serif text-xs tracking-widest text-blue-200 uppercase mb-1 sm:whitespace-nowrap"
+                          className="font-serif text-xs tracking-widest text-blue-200 uppercase mb-1"
                         >
                           {slide.subtitle}
                         </motion.p>
@@ -148,24 +148,24 @@ export default function DepthHero() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.4, duration: 0.8 }}
-                          className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:whitespace-nowrap"
+                          className="font-serif text-xl md:text-2xl font-bold text-white tracking-tight leading-tight mb-1"
                           style={{
+                            fontFamily: "'Noto Serif JP', serif",
                             textShadow: "0 2px 10px rgba(0,0,0,0.5)",
-                            whiteSpace: "pre-line", // 改行を反映させるために追加
                           }}
                         >
                           {slide.title}
                         </motion.h1>
 
                         {/* 説明文 - タイトルの下に配置 */}
-                        <motion.div
+                        <motion.p
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6, duration: 0.8 }}
-                          className="text-base sm:text-lg text-white/90 mb-2 sm:whitespace-nowrap"
+                          className="text-xs md:text-sm text-white/90 leading-snug mb-2"
                         >
                           {slide.description}
-                        </motion.div>
+                        </motion.p>
 
                         {/* CTAボタン */}
                         <motion.div

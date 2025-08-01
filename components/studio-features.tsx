@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Check } from "lucide-react"
-import FormattedText from "@/components/formatted-text"
 
 export default function StudioFeatures() {
   return (
@@ -22,13 +21,12 @@ export default function StudioFeatures() {
           >
             <div className="flex items-center justify-center mb-4">
               <div className="h-px bg-[#4facfe] w-16"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold mx-4">当スタジオが選ばれる理由</h2>
+              <h2 className="text-3xl font-bold mx-4 text-gray-800">当スタジオが選ばれる理由</h2>
               <div className="h-px bg-[#4facfe] w-16"></div>
             </div>
-            <FormattedText
-              text="プロ仕様の設備を完備した、ダンス練習に最適な環境をご提供します。"
-              className="text-base sm:text-lg leading-loose max-w-2xl mx-auto"
-            />
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              プロ仕様の設備を完備した、ダンス練習に最適な環境をご提供します
+            </p>
           </motion.div>
 
           {/* 3カラムの特徴紹介 */}
@@ -46,10 +44,12 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">清潔できれい</h3>
-                <FormattedText
-                  text="最新のリフォームで生まれ変わった、清潔感あふれるスタジオです。スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。"
-                  className="text-gray-700 text-center"
-                />
+                <p className="text-gray-700 text-center mb-4">
+                  最新のリフォームで生まれ変わった、清潔感あふれるスタジオです。
+                </p>
+                <p className="text-gray-700 text-center">
+                  スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。
+                </p>
               </div>
             </motion.div>
 
@@ -66,10 +66,11 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">充実した設備</h3>
-                <FormattedText
-                  text="3.6mの大型鏡に、気分を盛り上げるLEDライト完備。ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。更衣室・トイレもあり快適にご利用頂けます。"
-                  className="text-gray-700 text-center"
-                />
+                <p className="text-gray-700 text-center mb-4">3.6mの大型鏡に、気分を盛り上げるLEDライト完備</p>
+                <p className="text-gray-700 text-center">
+                  ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。
+                </p>
+                <p className="text-gray-700 text-center mt-4">更衣室・トイレもあり快適にご利用頂けます。</p>
               </div>
             </motion.div>
 
@@ -86,13 +87,17 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">リーズナブル</h3>
-                <div className="text-gray-700 text-center">
-                  <p>平日1時間¥1,000〜、土日祝¥1,500〜というお手頃価格で、</p>
-                  <p className="mt-2">高品質なスタジオを利用できます。</p>
-                  <p className="mt-2">5人以上のグループ利用なら</p>
-                  <p className="font-bold text-[#4facfe] mt-2">1人あたり¥200〜</p>
-                  <p className="mt-2">さらにお得にご利用可能です。</p>
-                </div>
+                <p className="text-gray-700 text-center mb-4">
+                  245円〜/30分というお手頃価格から、高品質なスタジオを利用できます。
+                </p>
+                <p className="text-gray-700 text-center">
+                  <span className="relative inline-block">
+                    <span className="relative z-10">定期利用をご利用いただくと</span>
+                    <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
+                  </span>
+                  <br />
+                  更にお得にご利用可能です。
+                </p>
               </div>
             </motion.div>
           </div>
@@ -124,24 +129,20 @@ export default function StudioFeatures() {
 
                   <div>
                     <h3 className="text-xl font-bold mb-6 text-gray-800">充実の設備</h3>
-                    <FormattedText
-                      text="天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです。35㎡の広々とした空間で、グループレッスンやチーム練習に最適。24時間いつでも利用可能で当日予約もOKです。"
-                      className="text-gray-700 mb-6"
-                    />
-                    <div className="bg-blue-50 rounded-xl px-4 sm:px-6 py-4 mb-6 border-l-4 border-[#4facfe]">
+                    <p className="text-gray-700 mb-6">
+                      天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです。
+                      35㎡の広々とした空間で、グループレッスンやチーム練習に最適。24時間いつでも利用可能で当日予約もOKです。
+                    </p>
+                    <div className="p-6 bg-blue-50 rounded-lg border-l-4 border-[#4facfe] mb-6">
                       <p className="text-gray-700 mb-2">
-                        <span className="font-bold text-blue-800 block sm:inline">初心者向けの広いミラー</span>
-                        <span className="hidden sm:inline">（W810cm×H180cm）</span>と、
-                        <span className="font-bold text-blue-800 block sm:inline mt-1 sm:mt-0">
-                          SNS配信用の高輝度LED照明
-                        </span>
-                        を完備しています。
+                        <span className="font-bold text-blue-800">初心者向けの広いミラー</span>（W810cm×H180cm）と、
+                        <span className="font-bold text-blue-800">SNS配信用の高輝度LED照明</span>を完備しています。
                       </p>
                       <p className="text-gray-700">
                         ダンス練習はもちろん、ライブ前のリハーサルや動画撮影にも
-                        <span className="relative inline-block mx-1">
+                        <span className="relative inline-block">
                           <span className="relative z-10 font-bold">最適な環境</span>
-                          <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-[#4facfe]/20 to-[#00f2fe]/20 rounded-full"></span>
+                          <span className="absolute bottom-0 left-0 w-full h-[8px] bg-yellow-200/60"></span>
                         </span>
                         を整えています。
                       </p>
@@ -284,15 +285,8 @@ export default function StudioFeatures() {
           </motion.div>
 
           {/* 予約ボタン */}
-          <div className="text-center">
-            <p className="text-base font-medium mb-4">
-              <span className="sm:hidden">
-                ＼スペースマーケットで簡単予約！／
-                <br />
-                30秒でサクッと予約完了
-              </span>
-              <span className="hidden sm:inline">＼スペースマーケットで簡単予約！30秒でサクッと予約完了／</span>
-            </p>
+          <div className="mt-12 text-center">
+            <p className="text-base font-medium mb-4">＼ スペースマーケットで簡単予約！30秒でサクッと予約完了 ／</p>
             <Link
               href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
               className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"

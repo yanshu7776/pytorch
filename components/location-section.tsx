@@ -13,7 +13,7 @@ export default function LocationSection() {
   return (
     <section ref={sectionRef} className="py-20 relative overflow-hidden bg-[#f8f9fa]" id="location">
       <div className="container mx-auto px-4 relative z-20">
-        <div className="content-center">
+        <div className="max-w-4xl mx-auto text-center">
           {/* ヘッダーセクション */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -21,11 +21,20 @@ export default function LocationSection() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-800">アクセス情報</h2>
-
-            <div className="quote">
-              「大阪メトロ玉造駅から徒歩2分、天王寺区の便利なロケーションに位置する当スタジオは、アクセス抜群の立地で、忙しい方でも気軽に通えます！」
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-px bg-[#4facfe] w-16"></div>
+              <h2 className="text-3xl font-bold mx-4 text-gray-800">アクセス情報</h2>
+              <div className="h-px bg-[#4facfe] w-16"></div>
             </div>
+
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              大阪メトロ玉造駅から徒歩2分、天王寺区の便利なロケーションに位置する当スタジオは、
+              <span className="relative inline-block">
+                <span className="relative z-10">アクセス抜群の立地</span>
+                <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
+              </span>
+              で、忙しい方でも気軽に通えます。
+            </p>
           </motion.div>
 
           {/* 地図と情報 - 中央揃えのカード */}

@@ -58,7 +58,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 0.02em;
-    line-height: 2; /* 行間広めに設定 */
+    line-height: 1.7;
     overflow-x: hidden;
     font-size: 14px;
   }
@@ -79,18 +79,6 @@
     letter-spacing: -0.01em;
     line-height: 1.4;
     margin-bottom: 0.75rem;
-    position: relative;
-  }
-
-  /* 見出しの下にライン追加 */
-  h1::after,
-  h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    margin: 0.5rem auto 1.5rem;
   }
 
   h1 {
@@ -119,48 +107,9 @@
 
   p {
     @apply text-sm md:text-base;
-    line-height: 2; /* 行間広めに設定 */
+    line-height: 1.7;
     margin-bottom: 1rem;
   }
-}
-
-/* 中央揃え & 最大幅 */
-.content-center {
-  max-width: 800px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 引用風メッセージ */
-.quote {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.8;
-  color: #005bac;
-  background-color: rgba(0, 91, 172, 0.05);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  margin: 1.5rem 0;
-  position: relative;
-}
-
-.quote::before {
-  content: '"';
-  font-size: 3rem;
-  position: absolute;
-  top: -0.5rem;
-  left: 0.5rem;
-  color: rgba(0, 91, 172, 0.2);
-}
-
-.quote::after {
-  content: '"';
-  font-size: 3rem;
-  position: absolute;
-  bottom: -2rem;
-  right: 0.5rem;
-  color: rgba(0, 91, 172, 0.2);
 }
 
 /* Section and container styles */
@@ -246,17 +195,6 @@
 
   .content-card {
     @apply p-5;
-  }
-
-  /* モバイル向けの調整 */
-  .content-center {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .quote {
-    font-size: 1.1rem;
-    padding: 1.2rem;
   }
 }
 

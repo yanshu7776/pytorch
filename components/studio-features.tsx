@@ -10,16 +10,20 @@ export default function StudioFeatures() {
   return (
     <section id="features" className="py-20 bg-[#f8f9fa]">
       <div className="container mx-auto px-4">
-        <div className="content-center">
+        <div className="max-w-5xl mx-auto">
           {/* ヘッダー */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-16"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-800">当スタジオが選ばれる理由</h2>
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-px bg-[#4facfe] w-16"></div>
+              <h2 className="text-3xl font-bold mx-4 text-gray-800">当スタジオが選ばれる理由</h2>
+              <div className="h-px bg-[#4facfe] w-16"></div>
+            </div>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               プロ仕様の設備を完備した、ダンス練習に最適な環境をご提供します
             </p>
@@ -40,7 +44,9 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">清潔できれい</h3>
-                <div className="quote">「最新のリフォームで生まれ変わった、清潔感あふれるスタジオです！」</div>
+                <p className="text-gray-700 text-center mb-4">
+                  最新のリフォームで生まれ変わった、清潔感あふれるスタジオです。
+                </p>
                 <p className="text-gray-700 text-center">
                   スタッフによる定期的な清掃、ロボット掃除機による毎日清掃によって、常に清潔を保っています。
                 </p>
@@ -60,11 +66,11 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">充実した設備</h3>
-                <div className="quote">「3.6mの大型鏡に、気分を盛り上げるLEDライト完備！」</div>
+                <p className="text-gray-700 text-center mb-4">3.6mの大型鏡に、気分を盛り上げるLEDライト完備</p>
                 <p className="text-gray-700 text-center">
                   ヨガマット4個、ヨガブロック8個、その他備品を誰でも自由にお使いいただけます。
-                  更衣室・トイレもあり快適にご利用頂けます。
                 </p>
+                <p className="text-gray-700 text-center mt-4">更衣室・トイレもあり快適にご利用頂けます。</p>
               </div>
             </motion.div>
 
@@ -81,8 +87,17 @@ export default function StudioFeatures() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-800">リーズナブル</h3>
-                <div className="quote">「245円〜/30分というお手頃価格から、高品質なスタジオを利用できます！」</div>
-                <p className="text-gray-700 text-center">定期利用をご利用いただくと更にお得にご利用可能です。</p>
+                <p className="text-gray-700 text-center mb-4">
+                  245円〜/30分というお手頃価格から、高品質なスタジオを利用できます。
+                </p>
+                <p className="text-gray-700 text-center">
+                  <span className="relative inline-block">
+                    <span className="relative z-10">定期利用をご利用いただくと</span>
+                    <span className="absolute bottom-0 left-0 w-full h-[10px] bg-[#4facfe]/20"></span>
+                  </span>
+                  <br />
+                  更にお得にご利用可能です。
+                </p>
               </div>
             </motion.div>
           </div>
@@ -114,10 +129,8 @@ export default function StudioFeatures() {
 
                   <div>
                     <h3 className="text-xl font-bold mb-6 text-gray-800">充実の設備</h3>
-                    <div className="quote">
-                      「天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです！」
-                    </div>
                     <p className="text-gray-700 mb-6">
+                      天王寺区で格安のレンタルスタジオをお探しなら、玉造駅から徒歩2分の当スタジオがおすすめです。
                       35㎡の広々とした空間で、グループレッスンやチーム練習に最適。24時間いつでも利用可能で当日予約もOKです。
                     </p>
                     <div className="p-6 bg-blue-50 rounded-lg border-l-4 border-[#4facfe] mb-6">

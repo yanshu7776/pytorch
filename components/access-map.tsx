@@ -34,7 +34,7 @@ export default function AccessMap() {
               className="w-full md:w-1/2 h-[300px] relative"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0668128053256!2d135.52416109999998!3d34.6728611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d25b40a7e7%3A0x3fe8b1f0eaec7a04!2z5qCq5byP5Lya56S-44OA44Oz44K544K544K_44K444KqQmV5b25k!5e0!3m2!1sja!2sjp!4v1713264508967!5m2!1sja!2sjp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0668128053256!2d135.5241611!3d34.6728611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d25b40a7e7%3A0x3fe8b1f0eaec7a04!2z546J6YCg6aeF!5e0!3m2!1sja!2sjp!4v1650000000000!5m2!1sja!2sjp"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

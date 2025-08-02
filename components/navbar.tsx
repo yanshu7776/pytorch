@@ -1,8 +1,6 @@
-// Navbarコンポーネントを修正して、ホームリンクをクリックしたときにLoadingAnimationを表示する
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -11,12 +9,13 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import LoadingAnimation from "./loading-animation"
 
-// ナビゲーションリンクを現在のコンテンツ構造に合わせて更新
+// ナビゲーションリンクにブログを追加
 const navLinks = [
   { name: "ホーム", href: "/" },
   { name: "スタジオ紹介", href: "#info" },
   { name: "スタジオ設備", href: "#features" },
   { name: "ギャラリー", href: "#gallery" },
+  { name: "ブログ", href: "/blog" }, // 追加
   { name: "アクセス", href: "#access" },
   { name: "よくある質問", href: "#faq" },
 ]
@@ -36,9 +35,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // スクロール処理を改善
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // 外部リンクの場合はデフォルトの動作を許可（新しいタブで開く）
     if (href.startsWith("https://")) {
       return
     }
@@ -46,16 +43,18 @@ export default function Navbar() {
     e.preventDefault()
     setIsOpen(false)
 
-    // ホームへのリンクの場合はトップにスクロールしてローディングアニメーションを表示
     if (href === "/") {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       })
-
-      // LoadingAnimationを表示
       setShowLoading(true)
+      return
+    }
 
+    // ブログページなど、別ページへの遷移
+    if (href.startsWith("/")) {
+      router.push(href)
       return
     }
 
@@ -64,8 +63,7 @@ export default function Navbar() {
     const targetElement = document.getElementById(targetId)
 
     if (targetElement) {
-      // ヘッダーの高さを考慮したオフセットを計算
-      const headerHeight = 80 // ヘッダーの高さを適宜調整
+      const headerHeight = 80
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
 
       window.scrollTo({
@@ -75,7 +73,6 @@ export default function Navbar() {
     }
   }
 
-  // アニメーションバリアント
   const menuVariants = {
     closed: {
       opacity: 0,
@@ -112,10 +109,8 @@ export default function Navbar() {
     },
   }
 
-  // スタイルを画像のデザインに合わせてシンプルに変更
   return (
     <>
-      {/* ローディングアニメーション */}
       {showLoading && (
         <LoadingAnimation
           forceShow={true}
@@ -149,7 +144,6 @@ export default function Navbar() {
               </motion.div>
             </a>
 
-            {/* Desktop Navigation - シンプルな横並びメニュー */}
             <nav className="hidden md:flex items-center space-x-8 z-10">
               {navLinks.map((link, index) => (
                 <motion.div
@@ -186,7 +180,6 @@ export default function Navbar() {
               </motion.div>
             </nav>
 
-            {/* Mobile Menu Button */}
             <motion.button
               className="md:hidden z-10 w-10 h-10 flex items-center justify-center"
               onClick={() => setIsOpen(!isOpen)}
@@ -223,7 +216,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation - Full Screen */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -248,7 +240,6 @@ export default function Navbar() {
                 <motion.div variants={linkVariants} className="mt-8">
                   <a
                     href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
-                    onClick={(e) => handleLinkClick(e, "#reservation")}
                     className="inline-flex items-center px-8 py-3 rounded-md bg-[#4facfe] text-white hover:bg-[#4facfe]/90 transition-all duration-300"
                     target="_blank"
                     rel="noopener noreferrer"

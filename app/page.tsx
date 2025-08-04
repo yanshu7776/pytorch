@@ -220,7 +220,7 @@ export default function Home() {
                     </div>
 
                     <a
-                      href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
+                      href="https://www.spacemarket.com/spaces/beyond_tamatsukuri/?promotion_link=true"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full flex items-center justify-center px-8 py-4 rounded-xl bg-white text-[#3a7bd5] font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"

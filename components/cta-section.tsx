@@ -27,7 +27,7 @@ export default function CTASection() {
           </p>
 
           <Link
-            href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
+            href="https://www.spacemarket.com/spaces/beyond_tamatsukuri/?promotion_link=true"
             className="cta-button"
             target="_blank"
             rel="noopener noreferrer"

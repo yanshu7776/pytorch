@@ -175,7 +175,7 @@ export default function Navbar() {
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <a
-                  href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
+                  href="https://www.spacemarket.com/spaces/beyond_tamatsukuri/?promotion_link=true"
                   className="inline-flex items-center px-6 py-2.5 rounded-md bg-[#4facfe] text-white hover:bg-[#4facfe]/90 transition-all duration-300 text-sm"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -256,8 +256,7 @@ export default function Navbar() {
                 ))}
                 <motion.div variants={linkVariants} className="mt-8">
                   <a
-                    href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
-                    onClick={(e) => handleLinkClick(e, "#reservation")}
+                    href="https://www.spacemarket.com/spaces/beyond_tamatsukuri/?promotion_link=true"
                     className="inline-flex items-center px-8 py-3 rounded-md bg-[#4facfe] text-white hover:bg-[#4facfe]/90 transition-all duration-300"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -175,7 +175,7 @@ export default function DepthHero() {
                           className="mt-1"
                         >
                           <Link
-                            href="https://spacemarket.com/p/HDNuvkO2oN95p2Dp"
+                            href="https://www.spacemarket.com/spaces/beyond_tamatsukuri/?promotion_link=true"
                             target="_blank"
                             rel="noopener noreferrer"
                           >

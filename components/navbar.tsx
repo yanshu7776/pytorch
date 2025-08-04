@@ -1,4 +1,3 @@
-// Navbarコンポーネントを修正して、ホームリンクをクリックしたときにLoadingAnimationを表示する
 "use client"
 
 import type React from "react"
@@ -234,6 +233,16 @@ export default function Navbar() {
               className="md:hidden fixed inset-0 bg-white z-40 flex items-center justify-center"
             >
               <div className="container mx-auto px-4 py-6 flex flex-col items-center justify-center h-full">
+                {/* バツボタンを追加 */}
+                <motion.button
+                  className="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Close menu"
+                  variants={linkVariants}
+                >
+                  <X className="text-gray-900" size={24} />
+                </motion.button>
+
                 {navLinks.map((link, index) => (
                   <motion.div key={link.name} variants={linkVariants} className="my-3">
                     <a

@@ -74,55 +74,110 @@
   h4,
   h5,
   h6 {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+    @apply text-2xl font-bold text-gray-900;
     line-height: 1.4;
     margin-bottom: 0.75rem;
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    @apply text-3xl sm:text-4xl;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+    @apply text-2xl sm:text-3xl;
   }
 
   h3 {
-    @apply text-xl md:text-2xl;
-    line-height: 1.4;
-    margin-bottom: 0.75rem;
-  }
-
-  h4 {
-    @apply text-lg md:text-xl;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
+    @apply text-xl sm:text-2xl;
   }
 
   p {
-    @apply text-sm md:text-base;
-    line-height: 1.7;
+    @apply text-base leading-loose text-gray-700;
     margin-bottom: 1rem;
   }
-}
 
-/* Section and container styles */
-.section-block {
-  @apply py-10 md:py-16 relative;
-}
+  .section-block {
+    @apply py-10 md:py-16 relative space-y-6;
+  }
 
-.container-wrapper {
-  @apply max-w-6xl mx-auto px-4 md:px-6;
-}
+  .container-wrapper {
+    @apply max-w-2xl mx-auto px-4 md:px-6;
+  }
 
-.content-card {
-  @apply bg-white rounded-lg shadow-md p-6 md:p-8 mb-6;
+  .content-card {
+    @apply bg-white rounded-lg shadow-md p-6 md:p-8 mb-6 space-y-6;
+  }
+
+  /* 引用風ブロック */
+  blockquote {
+    @apply bg-blue-50 rounded-xl px-6 py-4 my-4;
+  }
+
+  /* モバイル向けテキスト改行制御 */
+  @media (max-width: 640px) {
+    .mobile-no-break {
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .mobile-full-width {
+      width: 100%;
+      display: block;
+    }
+
+    /* モバイルでの改行調整 */
+    br.mobile-hidden {
+      display: none;
+    }
+
+    /* モバイルでのみ改行を表示 */
+    br.mobile-only {
+      display: inline;
+    }
+
+    /* 改行を強制する要素 */
+    .force-break {
+      display: block;
+      width: 100%;
+    }
+
+    /* 改行を防止する要素 */
+    .prevent-break {
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+
+  /* 強調テキスト - ハイライトマーカー改善 */
+  .highlight {
+    @apply text-blue-600 relative;
+    position: relative;
+    z-index: 1;
+  }
+
+  .highlight::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 233, 159, 0.6);
+    z-index: -1;
+  }
+
+  /* モバイル向けマーカー調整 */
+  @media (max-width: 640px) {
+    .highlight {
+      display: inline;
+      padding-bottom: 2px;
+    }
+
+    .highlight::after {
+      height: 6px;
+      bottom: 0;
+    }
+  }
 }
 
 /* Button styles */
@@ -142,9 +197,20 @@
   box-shadow: 0 6px 20px rgba(79, 172, 254, 0.35);
 }
 
+/* マーカー付きテキスト改善 */
 .cta-lead .marker {
   background: linear-gradient(transparent 60%, rgba(79, 172, 254, 0.2) 40%);
   padding: 0 4px;
+  position: relative;
+  display: inline;
+}
+
+/* モバイル向けcta-leadの調整 */
+@media (max-width: 640px) {
+  .cta-lead .marker {
+    padding: 0 2px;
+    margin: 0;
+  }
 }
 
 /* Card styles */
@@ -187,7 +253,36 @@
   width: 100%;
 }
 
-/* Responsive adjustments */
+/* 改善したインラインブロック用マーカー */
+.marker-highlight {
+  position: relative;
+  z-index: 1;
+  display: inline;
+}
+
+.marker-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(79, 172, 254, 0.2);
+  z-index: -1;
+}
+
+/* モバイル向けマーカーハイライト調整 */
+@media (max-width: 640px) {
+  .marker-highlight {
+    display: inline;
+  }
+
+  .marker-highlight::after {
+    height: 8px;
+  }
+}
+
+/* モバイル向け余白調整 */
 @media (max-width: 768px) {
   .section-block {
     @apply py-8;
@@ -196,6 +291,28 @@
   .content-card {
     @apply p-5;
   }
+
+  p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* 改行を制御するためのユーティリティクラス */
+.text-break-all {
+  word-break: break-all;
+}
+
+.text-break-word {
+  word-break: break-word;
+}
+
+.text-pre-line {
+  white-space: pre-line;
+}
+
+.text-pre-wrap {
+  white-space: pre-wrap;
 }
 
 /* Utility classes */
@@ -230,21 +347,9 @@
   z-index: 1;
 }
 
-/* マーカースタイル */
-.marker-highlight {
-  position: relative;
-  z-index: 1;
-}
-
-.marker-highlight::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background-color: rgba(79, 172, 254, 0.2);
-  z-index: -1;
+/* ラジアルグラデーション背景 */
+.bg-radial-vignette {
+  background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.3) 100%);
 }
 
 @keyframes float {
@@ -263,4 +368,42 @@
   100% {
     transform: translateY(0) translateX(0);
   }
+}
+
+/* 改善したマーカースタイル */
+.highlight-marker {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.highlight-marker::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, rgba(79, 172, 254, 0.2), rgba(0, 242, 254, 0.2));
+  z-index: -1;
+}
+
+/* モバイル向けマーカー調整 */
+@media (max-width: 640px) {
+  .highlight-marker {
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+
+  .highlight-marker::after {
+    height: 5px;
+    bottom: 0;
+  }
+}
+
+/* 既存のマーカーハイライト調整 */
+.marker-highlight::after {
+  border-radius: 3px;
+  background: linear-gradient(to right, rgba(79, 172, 254, 0.2), rgba(0, 242, 254, 0.2));
 }
